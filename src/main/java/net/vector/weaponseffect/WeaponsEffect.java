@@ -1,7 +1,6 @@
 package net.vector.weaponseffect;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -51,6 +50,11 @@ public class WeaponsEffect {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.CELESTINE);
+            event.accept(ModItems.ZENITHRA);
+            event.accept(ModItems.ASTRALITE);
+            event.accept(ModItems.RAW_ASTRALITE);
+            event.accept(ModItems.RAW_NEXALITE);
+            event.accept(ModItems.NEXALITE);
         }
     }
 
