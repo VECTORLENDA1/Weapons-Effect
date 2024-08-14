@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generator",
+  "textures": {
+   "layer0": "weaponseffect:item/celestine"
+  }
+}
