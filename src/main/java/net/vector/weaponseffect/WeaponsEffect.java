@@ -14,6 +14,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.item.ModItems;
 import org.slf4j.Logger;
 
@@ -33,6 +34,7 @@ public class WeaponsEffect {
 
 
         ModItems.Register(modEventBus);
+        ModBlocks.Register(modEventBus);
 
 
 
@@ -55,6 +57,10 @@ public class WeaponsEffect {
             event.accept(ModItems.RAW_ASTRALITE);
             event.accept(ModItems.RAW_NEXALITE);
             event.accept(ModItems.NEXALITE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.END_STONE_CELESTINE_ORE);
+            event.accept(ModBlocks.BLOCK_OF_NEXALITE);
         }
     }
 

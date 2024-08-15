@@ -4,5 +4,9 @@
   "item.weaponseffect.astralite": "Astralite",
   "item.weaponseffect.raw_astralite": "Raw Astralite",
   "item.weaponseffect.raw_nexalite": "Raw Nexalite",
-  "item.weaponseffect.nexalite": "Nexalite"
+  "item.weaponseffect.nexalite": "Nexalite",
+
+
+  "block.weaponseffect.end_stone_celestine_ore": "End Stone Celestine Ore",
+  "block.weaponseffect.block_of_nexalite": "Block Of Nexalite"
 }
