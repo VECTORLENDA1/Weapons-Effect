@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc" ,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+    ],
+      "key": {
+        "#": {
+          "item": "weaponseffect:raw_nexalite"
+        }
+      },
+      "result": {
+        "item": "weaponseffect:raw_nexalite_block"
+      }
+}

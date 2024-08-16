@@ -25,6 +25,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NEXALITE = ITEMS.register("nexalite",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IGNITHRA = ITEMS.register("ignithra",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_IGNITHRA = ITEMS.register("raw_ignithra",
+            () -> new Item(new Item.Properties()));
 
 
     //isto é só para dizer ao forge que este "Defer" é o nosso "MOD_ID"

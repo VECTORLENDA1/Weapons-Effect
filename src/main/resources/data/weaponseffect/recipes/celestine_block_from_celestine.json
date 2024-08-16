@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc" ,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+    ],
+      "key": {
+        "#": {
+          "item": "weaponseffect:celestine"
+        }
+      },
+      "result": {
+        "item": "weaponseffect:celestine_block"
+      }
+}

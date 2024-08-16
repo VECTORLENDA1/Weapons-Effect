@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc" ,
+  "ingredients": [
+    {
+      "item": "weaponseffect:ignithra_block"
+  }
+  ],
+  "result": {
+    "item": "weaponseffect:ignithra",
+    "count": 9
+  }
+}

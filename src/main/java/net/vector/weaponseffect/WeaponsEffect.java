@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
+import net.vector.weaponseffect.item.ModCreativeModTabs;
 import net.vector.weaponseffect.item.ModItems;
 import org.slf4j.Logger;
 
@@ -32,7 +33,7 @@ public class WeaponsEffect {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-
+        ModCreativeModTabs.register(modEventBus);
         ModItems.Register(modEventBus);
         ModBlocks.Register(modEventBus);
 
@@ -57,10 +58,24 @@ public class WeaponsEffect {
             event.accept(ModItems.RAW_ASTRALITE);
             event.accept(ModItems.RAW_NEXALITE);
             event.accept(ModItems.NEXALITE);
+            event.accept(ModItems.IGNITHRA);
+            event.accept(ModItems.RAW_IGNITHRA);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.END_STONE_CELESTINE_ORE);
-            event.accept(ModBlocks.BLOCK_OF_NEXALITE);
+            event.accept(ModBlocks.NEXALITE_BLOCK);
+            event.accept(ModBlocks.IGNITHRA_BLOCK);
+            event.accept(ModBlocks.RAW_IGNITHRA_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_IGNITHRA_ORE);
+            event.accept(ModBlocks.IGNITHRA_ORE);
+            event.accept(ModBlocks.ASTRALITE_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_ASTRALITE_ORE);
+            event.accept(ModBlocks.END_STONE_ZENITHRA_ORE);
+            event.accept(ModBlocks.RAW_NEXALITE_BLOCK);
+            event.accept(ModBlocks.RAW_ASTRALITE_BLOCK);
+            event.accept(ModBlocks.ZENITHRA_BLOCK);
+            event.accept(ModBlocks.CELESTINE_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_NEXALITE_ORE);
         }
     }
 

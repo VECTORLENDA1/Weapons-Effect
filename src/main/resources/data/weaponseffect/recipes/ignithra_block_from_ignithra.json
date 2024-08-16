@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc" ,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+    ],
+      "key": {
+        "#": {
+          "item": "weaponseffect:ignithra"
+        }
+      },
+      "result": {
+        "item": "weaponseffect:ignithra_block"
+      }
+}
