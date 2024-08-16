@@ -1,7 +1,6 @@
 package net.vector.weaponseffect;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,7 +33,9 @@ public class WeaponsEffect {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModCreativeModTabs.register(modEventBus);
+
         ModItems.Register(modEventBus);
+
         ModBlocks.Register(modEventBus);
 
 
@@ -51,32 +52,7 @@ public class WeaponsEffect {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CELESTINE);
-            event.accept(ModItems.ZENITHRA);
-            event.accept(ModItems.ASTRALITE);
-            event.accept(ModItems.RAW_ASTRALITE);
-            event.accept(ModItems.RAW_NEXALITE);
-            event.accept(ModItems.NEXALITE);
-            event.accept(ModItems.IGNITHRA);
-            event.accept(ModItems.RAW_IGNITHRA);
-        }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.END_STONE_CELESTINE_ORE);
-            event.accept(ModBlocks.NEXALITE_BLOCK);
-            event.accept(ModBlocks.IGNITHRA_BLOCK);
-            event.accept(ModBlocks.RAW_IGNITHRA_BLOCK);
-            event.accept(ModBlocks.DEEPSLATE_IGNITHRA_ORE);
-            event.accept(ModBlocks.IGNITHRA_ORE);
-            event.accept(ModBlocks.ASTRALITE_BLOCK);
-            event.accept(ModBlocks.DEEPSLATE_ASTRALITE_ORE);
-            event.accept(ModBlocks.END_STONE_ZENITHRA_ORE);
-            event.accept(ModBlocks.RAW_NEXALITE_BLOCK);
-            event.accept(ModBlocks.RAW_ASTRALITE_BLOCK);
-            event.accept(ModBlocks.ZENITHRA_BLOCK);
-            event.accept(ModBlocks.CELESTINE_BLOCK);
-            event.accept(ModBlocks.DEEPSLATE_NEXALITE_ORE);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

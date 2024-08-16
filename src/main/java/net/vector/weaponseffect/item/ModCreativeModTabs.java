@@ -10,8 +10,6 @@ import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
 import net.vector.weaponseffect.block.ModBlocks;
 
-import java.awt.*;
-
 
 //Isto serve para cria um guia no modo creativo dop jogo, para os teus items
 public class ModCreativeModTabs {
