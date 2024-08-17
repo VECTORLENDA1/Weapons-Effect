@@ -5,9 +5,9 @@
   "experience": 0.7,
   "group": "ignithra",
   "ingredient": {
-    "item": "minecraft:raw_ignithra"
+    "item": "weaponseffect:raw_ignithra"
   },
   "result": {
-    "id": "minecraft:ignithra"
+    "id": "weaponseffect:ignithra"
   }
 }

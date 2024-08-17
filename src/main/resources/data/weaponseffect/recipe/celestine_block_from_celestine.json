@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
+  "key": {
+    "#": {
+      "item": "weaponseffect:celestine",
   "pattern": [
     "###",
     "###",
     "###"
-    ],
-      "key": {
-        "#": {
-          "item": "weaponseffect:celestine"
+    ]
         }
       },
       "result": {

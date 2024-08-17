@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "weaponseffect:astralite",
-    "count": 9
+    "count": 9,
+    "id": "weaponseffect:astralite"
   }
 }

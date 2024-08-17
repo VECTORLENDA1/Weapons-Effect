@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
+  "key": {
+    "#": {
+      "item": "weaponseffect:ignithra",
   "pattern": [
     "###",
     "###",
     "###"
-    ],
-      "key": {
-        "#": {
-          "item": "weaponseffect:ignithra"
+    ]
         }
       },
       "result": {

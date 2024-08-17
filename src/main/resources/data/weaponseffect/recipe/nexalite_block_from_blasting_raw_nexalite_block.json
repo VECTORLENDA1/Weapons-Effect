@@ -5,9 +5,9 @@
   "experience": 9,
   "group": "nexalite",
   "ingredient": {
-    "item": "minecraft:raw_nexalite_block"
+    "item": "weaponseffect:raw_nexalite_block"
   },
   "result": {
-    "id": "minecraft:nexalite_block"
+    "id": "weaponseffect:nexalite_block"
   }
 }

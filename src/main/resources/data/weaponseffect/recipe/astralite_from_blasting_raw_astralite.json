@@ -5,9 +5,9 @@
   "experience": 1,
   "group": "astralite",
   "ingredient": {
-    "item": "minecraft:raw_astralite"
+    "item": "weaponseffect:raw_astralite"
   },
   "result": {
-    "id": "minecraft:astralite"
+    "id": "weaponseffect:astralite"
   }
 }

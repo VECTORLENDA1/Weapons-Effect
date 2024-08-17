@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
+  "key": {
+    "#": {
+      "item": "weaponseffect:nexalite",
   "pattern": [
     "###",
     "###",
     "###"
-    ],
-      "key": {
-        "#": {
-          "item": "weaponseffect:nexalite"
+    ]
         }
       },
       "result": {

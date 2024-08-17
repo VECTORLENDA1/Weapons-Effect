@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
+  "key": {
+    "#": {
+      "item": "weaponseffect:astralite"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
     ],
-      "key": {
-        "#": {
-          "item": "weaponseffect:astralite"
-        }
-      },
       "result": {
         "count": 1,
         "item": "weaponseffect:astralite_block"
