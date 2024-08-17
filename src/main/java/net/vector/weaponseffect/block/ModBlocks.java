@@ -59,7 +59,7 @@ public class ModBlocks {
                     .strength(5f,6).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final RegistryObject<Block> CELESTINE_BLOCK = registerBlockItem("celestine_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(0.5f,6).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+                    .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> DEEPSLATE_NEXALITE_ORE = registerBlockItem("deepslate_nexalite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
