@@ -3,14 +3,14 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "item": "weaponseffect:celestine",
+      "item": "weaponseffect:celestine"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
-    ]
-        }
-      },
+    ],
       "result": {
         "count": 1,
         "id": "weaponseffect:celestine_block"

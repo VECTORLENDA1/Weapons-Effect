@@ -3,14 +3,14 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "item": "weaponseffect:ignithra",
+      "item": "weaponseffect:ignithra"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
-    ]
-        }
-      },
+    ],
       "result": {
         "count": 1,
         "id": "weaponseffect:ignithra_block"

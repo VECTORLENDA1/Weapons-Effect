@@ -3,14 +3,14 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "item": "weaponseffect:raw_astralite",
+      "item": "weaponseffect:raw_astralite"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
-    ]
-        }
-      },
+    ],
       "result": {
         "count": 1,
         "id": "weaponseffect:raw_astralite_block"

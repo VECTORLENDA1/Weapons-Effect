@@ -3,14 +3,14 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "item": "weaponseffect:zenithra",
+      "item": "weaponseffect:zenithra"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
-    ]
-        }
-      },
+    ],
       "result": {
         "count": 1,
         "id": "weaponseffect:zenithra_block"

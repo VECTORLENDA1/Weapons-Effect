@@ -1,9 +1,12 @@
 package net.vector.weaponseffect.block;
 
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,10 +25,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, WeaponsEffect.MOD_ID);
 
     public static final RegistryObject<Block> END_STONE_CELESTINE_ORE = registerBlockItem("end_stone_celestine_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(5,10),BlockBehaviour.Properties.of()
                     .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final RegistryObject<Block> NEXALITE_BLOCK = registerBlockItem("nexalite_block",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_ORE)
                     .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.METAL)));
     public static final RegistryObject<Block> IGNITHRA_BLOCK = registerBlockItem("ignithra_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -46,7 +49,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> END_STONE_ZENITHRA_ORE = registerBlockItem("end_stone_zenithra_ore",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(5,10),BlockBehaviour.Properties.of()
                     .strength(5f,6).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final RegistryObject<Block> RAW_ASTRALITE_BLOCK = registerBlockItem("raw_astralite_block",
             () -> new Block(BlockBehaviour.Properties.of()

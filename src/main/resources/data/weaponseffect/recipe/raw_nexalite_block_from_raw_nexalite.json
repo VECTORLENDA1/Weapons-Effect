@@ -3,14 +3,14 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "item": "weaponseffect:raw_nexalite",
+      "item": "weaponseffect:raw_nexalite"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
-    ]
-        }
-      },
+    ],
       "result": {
         "count": 1,
         "id": "weaponseffect:raw_nexalite_block"
