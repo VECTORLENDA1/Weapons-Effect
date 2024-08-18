@@ -28,6 +28,7 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModItems.NEXALITE.get());
                     pOutput.accept(ModItems.IGNITHRA.get());
                     pOutput.accept(ModItems.RAW_IGNITHRA.get());
+                    pOutput.accept(ModItems.ANTRACITE.get());
 
                     pOutput.accept(ModBlocks.END_STONE_CELESTINE_ORE.get());
                     pOutput.accept(ModBlocks.NEXALITE_BLOCK.get());
@@ -43,6 +44,8 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModBlocks.ZENITHRA_BLOCK.get());
                     pOutput.accept(ModBlocks.CELESTINE_BLOCK.get());
                     pOutput.accept(ModBlocks.DEEPSLATE_NEXALITE_ORE.get());
+                    pOutput.accept(ModBlocks.NETHER_ANTRACITE_ORE.get());
+                    pOutput.accept(ModBlocks.ANTRACITE_BLOCK.get());
             })
                 .build());
 

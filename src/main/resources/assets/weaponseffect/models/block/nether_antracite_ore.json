@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "weaponseffect:block/nether_antracite_ore"
+  }
+}

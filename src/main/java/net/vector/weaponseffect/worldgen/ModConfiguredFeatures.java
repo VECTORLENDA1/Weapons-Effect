@@ -19,8 +19,12 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_IGNITHRA_ORE_KEY = registerKey("ignithra_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_WEAPONSEFFECT_ORE_KEY = registerKey("weaponseffect_ores");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_ANTRACITE_ORE_KEY = registerKey("nether_antracite_ores");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_STONE_CELESTINE_ORE_KEY = registerKey("end_stone_celestine_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_STONE_ZENITHRA_ORE_KEY = registerKey("end_stone_zenithra_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY = registerKey("deepslate_nexalite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY = registerKey("deepslate_astralite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY = registerKey("deepslate_ignithra_ore");
 
 
 
@@ -35,11 +39,21 @@ public class ModConfiguredFeatures {
                 ModBlocks.IGNITHRA_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_IGNITHRA_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 5));
-        register(context, NETHER_WEAPONSEFFECT_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-                ModBlocks.DEEPSLATE_IGNITHRA_ORE.get().defaultBlockState(),0));
+        //OVERWORLD ORES
+        register(context, OVERWORLD_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 5));//vein size
+        register(context, OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 6));
+        register(context, OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 5));
+        register(context, OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 6));
+
+        //NETHER ORES
+        register(context, NETHER_ANTRACITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
+                ModBlocks.NETHER_ANTRACITE_ORE.get().defaultBlockState(),4));//vein size
+
+        //END ORES
         register(context, END_STONE_CELESTINE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.END_STONE_CELESTINE_ORE.get().defaultBlockState(),4));
+                ModBlocks.END_STONE_CELESTINE_ORE.get().defaultBlockState(),4));//vein size
+        register(context, END_STONE_ZENITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
+                ModBlocks.END_STONE_ZENITHRA_ORE.get().defaultBlockState(),4));
 
 
     }

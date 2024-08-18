@@ -66,6 +66,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_NEXALITE_ORE = registerBlockItem("deepslate_nexalite_ore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final RegistryObject<Block> NETHER_ANTRACITE_ORE = registerBlockItem("nether_antracite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(1,4),BlockBehaviour.Properties.of()
+                    .strength(0.4f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
+    public static final RegistryObject<Block> ANTRACITE_BLOCK = registerBlockItem("antracite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
 

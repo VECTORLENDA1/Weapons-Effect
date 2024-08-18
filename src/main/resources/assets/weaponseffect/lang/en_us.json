@@ -7,6 +7,7 @@
   "item.weaponseffect.nexalite": "Nexalite",
   "item.weaponseffect.ignithra": "Ignithra",
   "item.weaponseffect.raw_ignithra": "Raw Ignithra",
+  "item.weaponseffect.antracite": "Antracite",
 
 
   "block.weaponseffect.end_stone_celestine_ore": "End Stone Celestine Ore",
@@ -23,6 +24,8 @@
   "block.weaponseffect.raw_astralite_block": "Block of Raw Astralite",
   "block.weaponseffect.raw_nexalite_block": "Block of Raw Nexalite",
   "block.weaponseffect.celestine_block": "Block of Celestine",
+  "block.weaponseffect.antracite_block": "Block of Antracite",
+  "block.weaponseffect.nether_antracite_ore": "Nether Antracite Ore",
 
   "creativetab.weapons_effect": "Weapons Effect"
 }

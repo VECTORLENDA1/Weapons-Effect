@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
+import net.vector.weaponseffect.item.custom.FuelItem;
 
 public class ModItems {
     //Defer = Uma lista onde os nossos items vão ficar no "Weapons Effect"
@@ -29,6 +30,9 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_IGNITHRA = ITEMS.register("raw_ignithra",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ANTRACITE = ITEMS.register("antracite",
+            () -> new FuelItem(new Item.Properties(), 3200));
+
 
 
     //isto é só para dizer ao forge que este "Defer" é o nosso "MOD_ID"

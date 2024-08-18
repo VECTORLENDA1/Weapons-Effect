@@ -13,6 +13,8 @@
     "weaponseffect:zenithra_block",
     "weaponseffect:raw_astralite_block",
     "weaponseffect:raw_nexalite_block",
-    "weaponseffect:raw_ignithra_block"
+    "weaponseffect:raw_ignithra_block",
+    "weaponseffect:nether_antracite_ore",
+    "weaponseffect:antracite_block"
   ]
 }
