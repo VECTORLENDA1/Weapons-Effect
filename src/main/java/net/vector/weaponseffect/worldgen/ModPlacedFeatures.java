@@ -43,15 +43,15 @@ public class ModPlacedFeatures {
                 ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(10), VerticalAnchor.absolute(50))));
 
-        register(context, DEEPSLATE_ASTRALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_ASTRALITE_ORE_KEY),
+        register(context, DEEPSLATE_ASTRALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-20), VerticalAnchor.absolute(-40))));
 
-        register(context, DEEPSLATE_IGNITHRA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_IGNITHRA_ORE_KEY),
+        register(context, DEEPSLATE_IGNITHRA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(0))));
 
-        register(context, DEEPSLATE_NEXALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DEEPSLATE_NEXALITE_ORE_KEY),
+        register(context, DEEPSLATE_NEXALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-30), VerticalAnchor.absolute(-10))));
     }
