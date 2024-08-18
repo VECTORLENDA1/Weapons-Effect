@@ -1,12 +1,15 @@
 package net.vector.weaponseffect.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
 import net.vector.weaponseffect.item.custom.FuelItem;
+import net.vector.weaponseffect.item.custom.ModToolTiers;
 
 public class ModItems {
     //Defer = Uma lista onde os nossos items vão ficar no "Weapons Effect"
@@ -32,6 +35,14 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANTRACITE = ITEMS.register("antracite",
             () -> new FuelItem(new Item.Properties(), 3200));
+
+
+
+
+    //WEAPONS
+    public static final RegistryObject<Item> FIRE_SWORD = ITEMS.register("fire_sword",
+            () -> new SwordItem(ModToolTiers.FIRE_SWORD, new Item.Properties().fireResistant()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.FIRE_SWORD, 3, 2F))));
 
 
 

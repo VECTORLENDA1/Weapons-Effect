@@ -46,6 +46,10 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModBlocks.DEEPSLATE_NEXALITE_ORE.get());
                     pOutput.accept(ModBlocks.NETHER_ANTRACITE_ORE.get());
                     pOutput.accept(ModBlocks.ANTRACITE_BLOCK.get());
+
+
+                    //WEAPONS
+                    pOutput.accept(ModItems.FIRE_SWORD.get());
             })
                 .build());
 
