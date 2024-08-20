@@ -10,7 +10,8 @@ import net.vector.weaponseffect.item.ModItems;
 import net.vector.weaponseffect.util.ModTags;
 
 public enum ModToolTiers implements Tier {
-    FIRE_SWORD(ModTags.Blocks.NEEDS_WEAPONS_EFFECT_TOOL, 800, 3.0F, 5.0F, 12, () -> Ingredient.of(ModItems.FIRE_SWORD.get()));
+    FIRE_SWORD(ModTags.Blocks.NEEDS_WEAPONS_EFFECT_TOOL, 800, 1.0F, 2.0F, 12,
+            () -> Ingredient.of(ModItems.FIRE_SWORD.get()));
 
     private final TagKey<Block> incorrectBlocksForDrops;
     private final int uses;
