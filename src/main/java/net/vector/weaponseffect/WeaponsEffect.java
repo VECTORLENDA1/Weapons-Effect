@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.effect.ModEffect;
+import net.vector.weaponseffect.enchantment.ModEnchantments;
 import net.vector.weaponseffect.item.ModCreativeModTabs;
 import net.vector.weaponseffect.item.ModItems;
 import org.slf4j.Logger;
@@ -41,7 +42,9 @@ public class WeaponsEffect {
         ModBlocks.Register(modEventBus);
 
         ModEffect.register(modEventBus);
-        
+
+        ModEnchantments.Register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

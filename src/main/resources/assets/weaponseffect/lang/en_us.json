@@ -30,6 +30,16 @@
 
 
   "item.weaponseffect.fire_sword": "Fire Sword",
+  "item.weaponseffect.wither_sword": "Wither Sword",
+  "item.weaponseffect.blindness_dagger": "Blindness Dagger",
+  "item.weaponseffect.darkness_mace": "Darkness Mace",
+  "item.weaponseffect.gimlis_axe": "Gimli's Axe",
+  "item.weaponseffect.ice_sword": "Ice Sword",
+  "item.weaponseffect.lance": "Lance",
+  "item.weaponseffect.poison_sword": "Poison Sword",
+  "item.weaponseffect.strength_hammer": "Strength Hammer",
+  "item.weaponseffect.wings_of_doom": "Wings of Doom",
+  "item.weaponseffect.swiftness_dagger": "Swiftness Dagger",
 
   "creativetab.weapons_effect": "Weapons Effect"
 }

@@ -50,6 +50,16 @@ public class ModCreativeModTabs {
 
                     //WEAPONS
                     pOutput.accept(ModItems.FIRE_SWORD.get());
+                    pOutput.accept(ModItems.WITHER_SWORD.get());
+                    pOutput.accept(ModItems.BLINDNESS_DAGGER.get());
+                    pOutput.accept(ModItems.DARKNESS_MACE.get());
+                    pOutput.accept(ModItems.GIMLIS_AXE.get());
+                    pOutput.accept(ModItems.ICE_SWORD.get());
+                    pOutput.accept(ModItems.LANCE.get());
+                    pOutput.accept(ModItems.POISON_SWORD.get());
+                    pOutput.accept(ModItems.STRENGTH_HAMMER.get());
+                    pOutput.accept(ModItems.WINGS_OF_DOOM.get());
+                    pOutput.accept(ModItems.SWIFTNESS_DAGGER.get());
             })
                 .build());
 

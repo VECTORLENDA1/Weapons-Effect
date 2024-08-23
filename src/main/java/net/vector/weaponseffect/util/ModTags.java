@@ -9,7 +9,17 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_WEAPONS_EFFECT_TOOL = tag("needs_weapons_effect_tool");
+        public static final TagKey<Block> FIRE_SWORD = tag("fire_sword");
+        public static final TagKey<Block> WITHER_SWORD = tag("wither_sword");
+        public static final TagKey<Block> BLINDNESS_DAGGER = tag("blindness_dagger");
+        public static final TagKey<Block> DARKNESS_MACE = tag("darkness_mace");
+        public static final TagKey<Block> GIMLIS_AXE = tag("gimlis_axe");
+        public static final TagKey<Block> ICE_SWORD = tag("ice_sword");
+        public static final TagKey<Block> LANCE = tag("lance");
+        public static final TagKey<Block> POISON_SWORD = tag("poison_sword");
+        public static final TagKey<Block> STRENGTH_HAMMER = tag("strength_hammer");
+        public static final TagKey<Block> WINGS_OF_DOOM = tag("wings_of_doom");
+        public static final TagKey<Block> SWIFTNESS_DAGGER = tag("swiftness_dagger");
 
 
         private static TagKey<Block> tag(String name) {

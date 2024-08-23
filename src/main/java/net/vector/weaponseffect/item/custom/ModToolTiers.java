@@ -8,10 +8,22 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.vector.weaponseffect.item.ModItems;
 import net.vector.weaponseffect.util.ModTags;
+import org.jetbrains.annotations.NotNull;
 
 public enum ModToolTiers implements Tier {
-    FIRE_SWORD(ModTags.Blocks.NEEDS_WEAPONS_EFFECT_TOOL, 800, 1.0F, 2.0F, 12,
-            () -> Ingredient.of(ModItems.FIRE_SWORD.get()));
+    FIRE_SWORD(ModTags.Blocks.FIRE_SWORD, 800, 1.0F, 1.0F, 12, () -> Ingredient.of(ModItems.FIRE_SWORD.get())),
+    WITHER_SWORD(ModTags.Blocks.WITHER_SWORD, 800, 1.0F, 1.0F, 15, () -> Ingredient.of(ModItems.WITHER_SWORD.get())),
+    BLINDNESS_DAGGER(ModTags.Blocks.BLINDNESS_DAGGER, 700, 1.0F, 1.0F, 8, () -> Ingredient.of(ModItems.BLINDNESS_DAGGER.get())),
+    DARKNESS_MACE(ModTags.Blocks.DARKNESS_MACE, 1300, 1.0F, 1.0F, 18, () -> Ingredient.of(ModItems.DARKNESS_MACE.get())),
+    GIMLIS_AXE(ModTags.Blocks.GIMLIS_AXE, 1500, 1.0F, 1.0F, 20, () -> Ingredient.of(ModItems.GIMLIS_AXE.get())),
+    ICE_SWORD(ModTags.Blocks.ICE_SWORD, 900, 1.0F, 1.0F, 13, () -> Ingredient.of(ModItems.ICE_SWORD.get())),
+    LANCE(ModTags.Blocks.LANCE, 1000, 1.0F, 1.0F, 10, () -> Ingredient.of(ModItems.LANCE.get())),
+    POISON_SWORD(ModTags.Blocks.POISON_SWORD, 800, 1.0F, 1.0F, 11, () -> Ingredient.of(ModItems.POISON_SWORD.get())),
+    STRENGTH_HAMMER(ModTags.Blocks.STRENGTH_HAMMER, 2000, 1.0F, 1.0F, 7, () -> Ingredient.of(ModItems.STRENGTH_HAMMER.get())),
+    WINGS_OF_DOOM(ModTags.Blocks.WINGS_OF_DOOM, 5000, 1.0F, 1.0F, 30, () -> Ingredient.of(ModItems.WINGS_OF_DOOM.get())),
+    SWIFTNESS_DAGGER(ModTags.Blocks.SWIFTNESS_DAGGER, 500, 1.0F, 1.0F, 8, () -> Ingredient.of(ModItems.SWIFTNESS_DAGGER.get()));
+
+
 
     private final TagKey<Block> incorrectBlocksForDrops;
     private final int uses;
@@ -45,7 +57,7 @@ public enum ModToolTiers implements Tier {
     }
 
     @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
+    public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
         return this.incorrectBlocksForDrops;
     }
 
@@ -55,8 +67,9 @@ public enum ModToolTiers implements Tier {
     }
 
     @Override
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
+
 }
 
