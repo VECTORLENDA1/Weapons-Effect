@@ -9,16 +9,16 @@
       "item": "weaponseffect:nexalite"
     },
     "B": {
-      "item": "weaponseffect:nexalite_block"
+      "item": "minecraft:iron_block"
     }
   },
   "pattern": [
     " XB",
-    "XBX",
-    "#X "
+    " #X",
+    "#  "
   ],
   "result": {
     "count": 1,
-    "id": "weaponseffect:wither_sword"
+    "id": "weaponseffect:lance"
   }
 }

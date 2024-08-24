@@ -3,15 +3,18 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "minecraft:blaze_rod"
     },
     "X": {
       "item": "weaponseffect:ignithra"
+    },
+    "B": {
+      "item": "weaponseffect:ignithra_block"
     }
   },
   "pattern": [
-    " XX",
-    "XXX",
+    " XB",
+    "XBX",
     "#X "
   ],
   "result": {

@@ -1,24 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "equipment",
   "key": {
     "#": {
       "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "weaponseffect:nexalite"
     },
     "B": {
       "item": "weaponseffect:nexalite_block"
     }
   },
   "pattern": [
-    " XB",
-    "XBX",
-    "#X "
+    "   ",
+    " B ",
+    "#  "
   ],
   "result": {
     "count": 1,
-    "id": "weaponseffect:wither_sword"
+    "id": "weaponseffect:blindness_dagger"
   }
 }
