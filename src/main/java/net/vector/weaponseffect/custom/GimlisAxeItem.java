@@ -14,7 +14,7 @@ public class GimlisAxeItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        pTarget.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200,3), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 10,100), pAttacker);
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
 }

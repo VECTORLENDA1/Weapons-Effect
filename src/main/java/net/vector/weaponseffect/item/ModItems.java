@@ -68,7 +68,7 @@ public class ModItems {
             () -> new StrengthHammerItem(ModToolTiers.STRENGTH_HAMMER, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.STRENGTH_HAMMER, 5, -2F))));
     public static final RegistryObject<Item> WINGS_OF_DOOM = ITEMS.register("wings_of_doom",
-            () -> new WingsOfDoomItem(ModToolTiers.WINGS_OF_DOOM, new Item.Properties()
+            () -> new WingsOfDoomItem(ModToolTiers.WINGS_OF_DOOM, new Item.Properties().fireResistant()
                     .attributes(SwordItem.createAttributes(ModToolTiers.WINGS_OF_DOOM, 5, -2F))));
     public static final RegistryObject<Item> SWIFTNESS_DAGGER = ITEMS.register("swiftness_dagger",
             () -> new SwiftnessDaggerItem(ModToolTiers.SWIFTNESS_DAGGER, new Item.Properties()

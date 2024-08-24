@@ -14,7 +14,8 @@ public class IceSwordItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        pTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40,50), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 4), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 2), pAttacker);
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
 }

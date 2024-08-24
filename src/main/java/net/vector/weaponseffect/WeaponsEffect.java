@@ -35,20 +35,17 @@ public class WeaponsEffect {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        ModCreativeModTabs.register(modEventBus);
 
         ModItems.Register(modEventBus);
-
         ModBlocks.Register(modEventBus);
-
         ModEffect.register(modEventBus);
-
         ModEnchantments.Register(modEventBus);
+        ModCreativeModTabs.register(modEventBus);
 
 
-        // Register the item to a creative tab
+
+
         modEventBus.addListener(this::addCreative);
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 

@@ -19,13 +19,12 @@ public class WingsOfDoomItem extends SwordItem {
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         boolean result = super.hurtEnemy(stack, target, attacker);
 
-        target.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 1), attacker);
-        target.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1), attacker);
-        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 1), attacker);
-        target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 100, 1), attacker);
-        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 1), attacker);
-        target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 100, 1), attacker);
-        target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 1), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 2), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 2), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 100, 2), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 2), attacker);
 
 
         if (result && !target.level().isClientSide() && !target.fireImmune()) {
