@@ -7,8 +7,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 
-public class StrengthHammerItem extends SwordItem {
-    public StrengthHammerItem(Tier pTier, Properties pProperties) {
+public class StrengthsHammerItem extends SwordItem {
+    public StrengthsHammerItem(Tier pTier, Properties pProperties) {
         super(pTier, pProperties);
     }
 

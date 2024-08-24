@@ -28,7 +28,7 @@ public class EventEffectItems {
             boolean hasIceSwordItem = mainHandItem.getItem() instanceof IceSwordItem;
             boolean hasLanceItem = mainHandItem.getItem() instanceof LanceItem;
             boolean hasPoisonSwordItem = mainHandItem.getItem() instanceof PoisonSwordItem;
-            boolean hasStrengthHammerItem = mainHandItem.getItem() instanceof StrengthHammerItem;
+            boolean hasStrengthHammerItem = mainHandItem.getItem() instanceof StrengthsHammerItem;
             boolean hasSwiftnessDaggerItem = mainHandItem.getItem() instanceof SwiftnessDaggerItem;
             boolean hasWingsofDoomItem = mainHandItem.getItem() instanceof WingsOfDoomItem;
             boolean hasWitherSwordItem = mainHandItem.getItem() instanceof WitherSwordItem;
@@ -72,13 +72,15 @@ public class EventEffectItems {
             }
 
             //Movement Speed//
-            if (hasLanceItem || hasWingsofDoomItem) {
+            if (hasLanceItem || hasWingsofDoomItem || hasSwiftnessDaggerItem) {
                 int speedAmplifier = 0;
 
                 if (hasWingsofDoomItem) {
                     speedAmplifier = 1;
                 } else if (hasLanceItem) {
                     speedAmplifier = 0;
+                }else if (hasSwiftnessDaggerItem) {
+                    speedAmplifier = 2;
                 }
 
                 if (!player.hasEffect(MobEffects.MOVEMENT_SPEED) || player.getEffect(MobEffects.MOVEMENT_SPEED).getAmplifier() != speedAmplifier) {
@@ -113,6 +115,59 @@ public class EventEffectItems {
             } else {
                 player.removeEffect(MobEffects.DARKNESS);
             }
+
+
+            //DAMAGE_RESISTANCE//
+            if (hasGimlisAxeItem || hasWingsofDoomItem) {
+                int resAmplifier = 0;
+                if (hasGimlisAxeItem) {
+                    resAmplifier = 1;
+                }else if (hasWingsofDoomItem) {
+                    resAmplifier = 0;
+                }
+                if (!player.hasEffect(MobEffects.DAMAGE_RESISTANCE) || player.getEffect(MobEffects.DAMAGE_RESISTANCE).getAmplifier() != resAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12000, resAmplifier, false, false, true));
+                }
+            } else {
+                player.removeEffect(MobEffects.DAMAGE_RESISTANCE);
+            }
+
+
+            //SATURATION//
+            if (hasWingsofDoomItem) {
+                int satAmplifier = 0;
+                if (hasWingsofDoomItem) {
+                    satAmplifier = 0;
+                }
+                if (!player.hasEffect(MobEffects.SATURATION) || player.getEffect(MobEffects.SATURATION).getAmplifier() != satAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 12000, satAmplifier, false, false, true));
+                }
+            } else {
+                player.removeEffect(MobEffects.SATURATION);
+            }
+
+
+            //NIGHT_VISION//
+            if (hasWingsofDoomItem) {
+                int nightAmplifier = 0;
+                if (hasWingsofDoomItem) {
+                    nightAmplifier = 0;
+                }
+                if (!player.hasEffect(MobEffects.NIGHT_VISION) || player.getEffect(MobEffects.NIGHT_VISION).getAmplifier() != nightAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 12000, nightAmplifier, false, false, true));
+                }
+            } else {
+                player.removeEffect(MobEffects.NIGHT_VISION);
+            }
+
+
+
+
+
+
+
+
+
 
             //Immunities//
 

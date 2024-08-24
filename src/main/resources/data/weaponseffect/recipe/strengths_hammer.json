@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "weaponseffect:astralite_block"
+    },
+    "B": {
+      "item": "weaponseffect:nexalite_block"
+    }
+  },
+  "pattern": [
+    "XBX",
+    "BXB",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:strengths_hammer"
+  }
+}

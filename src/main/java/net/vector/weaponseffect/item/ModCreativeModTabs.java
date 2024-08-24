@@ -57,7 +57,7 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModItems.ICE_SWORD.get());
                     pOutput.accept(ModItems.LANCE.get());
                     pOutput.accept(ModItems.POISON_SWORD.get());
-                    pOutput.accept(ModItems.STRENGTH_HAMMER.get());
+                    pOutput.accept(ModItems.STRENGTHS_HAMMER.get());
                     pOutput.accept(ModItems.WINGS_OF_DOOM.get());
                     pOutput.accept(ModItems.SWIFTNESS_DAGGER.get());
             })
