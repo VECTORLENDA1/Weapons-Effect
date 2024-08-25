@@ -28,7 +28,7 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
          register(context, IGNITHRA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_IGNITHRA_ORE_KEY),
-                 ModOrePlacement.commonOrePlacement(6,//how many veins por chunk
+                 ModOrePlacement.commonOrePlacement(4,//how many veins por chunk
                          HeightRangePlacement.uniform(VerticalAnchor.absolute(20), VerticalAnchor.absolute(60))));
 
         register(context, END_STONE_CELESTINE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_STONE_CELESTINE_ORE_KEY),
@@ -48,7 +48,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-20), VerticalAnchor.absolute(-40))));
 
         register(context, DEEPSLATE_IGNITHRA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(6,
+                ModOrePlacement.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(0))));
 
         register(context, DEEPSLATE_NEXALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY),

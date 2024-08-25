@@ -28,6 +28,8 @@ public class ModConfiguredFeatures {
 
 
 
+
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>>context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
@@ -37,19 +39,22 @@ public class ModConfiguredFeatures {
 
         List<OreConfiguration.TargetBlockState> overworldignithraOres = List.of(OreConfiguration.target(stoneReplaceables,
                         ModBlocks.IGNITHRA_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_IGNITHRA_ORE.get().defaultBlockState()));
-List<OreConfiguration.TargetBlockState> overworldastraliteOre = List.of(OreConfiguration.target(stoneReplaceables,
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_IGNITHRA_ORE.get().defaultBlockState())
+        );
+        List<OreConfiguration.TargetBlockState> overworldastraliteOre = List.of(OreConfiguration.target(stoneReplaceables,
                         ModBlocks.DEEPSLATE_ASTRALITE_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ASTRALITE_ORE.get().defaultBlockState()));
-List<OreConfiguration.TargetBlockState> overworldnexaliteOre = List.of(OreConfiguration.target(stoneReplaceables,
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ASTRALITE_ORE.get().defaultBlockState())
+        );
+        List<OreConfiguration.TargetBlockState> overworldnexaliteOre = List.of(OreConfiguration.target(stoneReplaceables,
                         ModBlocks.DEEPSLATE_NEXALITE_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_NEXALITE_ORE.get().defaultBlockState()));
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_NEXALITE_ORE.get().defaultBlockState())
+        );
 
 
         //OVERWORLD ORES
-        register(context, OVERWORLD_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldignithraOres, 5));//vein size
+        register(context, OVERWORLD_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldignithraOres, 3));//vein size
         register(context, OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldastraliteOre, 3));
-        register(context, OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldignithraOres, 5));
+        register(context, OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldignithraOres, 3));
         register(context, OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldnexaliteOre, 3));
 
         //NETHER ORES
@@ -61,13 +66,11 @@ List<OreConfiguration.TargetBlockState> overworldnexaliteOre = List.of(OreConfig
                 ModBlocks.END_STONE_CELESTINE_ORE.get().defaultBlockState(),4));//vein size
         register(context, END_STONE_ZENITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.END_STONE_ZENITHRA_ORE.get().defaultBlockState(),4));
-
-
     }
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(WeaponsEffect.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE,ResourceLocation.fromNamespaceAndPath(WeaponsEffect.MOD_ID, name));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
