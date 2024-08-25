@@ -30,20 +30,27 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>>context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
-        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new TagMatchTest(Tags.Blocks.NETHERRACK);
         RuleTest endReplaceables = new TagMatchTest(Tags.Blocks.END_STONES);
 
 
-        List<OreConfiguration.TargetBlockState> overworldIgnithraOres = List.of(OreConfiguration.target(stoneReplaceables,
-                ModBlocks.IGNITHRA_ORE.get().defaultBlockState()),
+        List<OreConfiguration.TargetBlockState> overworldignithraOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.IGNITHRA_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_IGNITHRA_ORE.get().defaultBlockState()));
+List<OreConfiguration.TargetBlockState> overworldastraliteOre = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.DEEPSLATE_ASTRALITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_ASTRALITE_ORE.get().defaultBlockState()));
+List<OreConfiguration.TargetBlockState> overworldnexaliteOre = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.DEEPSLATE_NEXALITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_NEXALITE_ORE.get().defaultBlockState()));
+
 
         //OVERWORLD ORES
-        register(context, OVERWORLD_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 5));//vein size
-        register(context, OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 6));
-        register(context, OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 5));
-        register(context, OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldIgnithraOres, 6));
+        register(context, OVERWORLD_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldignithraOres, 5));//vein size
+        register(context, OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldastraliteOre, 3));
+        register(context, OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY, Feature.ORE, new OreConfiguration(overworldignithraOres, 5));
+        register(context, OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldnexaliteOre, 3));
 
         //NETHER ORES
         register(context, NETHER_ANTRACITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,

@@ -81,15 +81,4 @@ public class ModItems {
     public static void Register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-
-    private ItemStack fireSwordItem;
-
-    public ItemStack getFireSwordItem() {
-        return fireSwordItem;
-    }
-
-
-
-
-
 }

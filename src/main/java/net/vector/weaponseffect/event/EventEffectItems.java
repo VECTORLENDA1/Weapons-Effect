@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -32,6 +33,8 @@ public class EventEffectItems {
             boolean hasSwiftnessDaggerItem = mainHandItem.getItem() instanceof SwiftnessDaggerItem;
             boolean hasWingsofDoomItem = mainHandItem.getItem() instanceof WingsOfDoomItem;
             boolean hasWitherSwordItem = mainHandItem.getItem() instanceof WitherSwordItem;
+
+            boolean hasFireResistancePotion = player.getMainHandItem().getItem() == Items.POTION;
 
 
 
@@ -88,32 +91,6 @@ public class EventEffectItems {
                 }
             } else {
                 player.removeEffect(MobEffects.MOVEMENT_SPEED);
-            }
-
-            //Blindness//
-            if (hasBlindnessDaggerItem) {
-                int blindAmplifier = 0;
-                if (hasBlindnessDaggerItem) {
-                    blindAmplifier = 1;
-                }
-                if (!player.hasEffect(MobEffects.BLINDNESS) || player.getEffect(MobEffects.BLINDNESS).getAmplifier() != blindAmplifier) {
-                    player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 12000, blindAmplifier, false, false, true));
-                }
-            } else {
-                player.removeEffect(MobEffects.BLINDNESS);
-            }
-
-            //Darkness//
-            if (hasDarknessMaceItem) {
-                int darkAmplifier = 0;
-                if (hasDarknessMaceItem) {
-                    darkAmplifier = 1;
-                }
-                if (!player.hasEffect(MobEffects.DARKNESS) || player.getEffect(MobEffects.DARKNESS).getAmplifier() != darkAmplifier) {
-                    player.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 12000, darkAmplifier, false, false, true));
-                }
-            } else {
-                player.removeEffect(MobEffects.DARKNESS);
             }
 
 
