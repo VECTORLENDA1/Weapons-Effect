@@ -4,16 +4,21 @@ package net.vector.weaponseffect.event;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.vector.weaponseffect.custom.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Mod.EventBusSubscriber(modid = "weaponseffect", bus =
         Mod.EventBusSubscriber.Bus.FORGE)
 public class EventEffectItems {
+
+    public static final String EFFECT_TAG = "ItemEffectApplied";
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -34,107 +39,164 @@ public class EventEffectItems {
             boolean hasWingsofDoomItem = mainHandItem.getItem() instanceof WingsOfDoomItem;
             boolean hasWitherSwordItem = mainHandItem.getItem() instanceof WitherSwordItem;
 
-            boolean hasFireResistancePotion = player.getMainHandItem().getItem() == Items.POTION;
-
-
 
             //Fire Resistance//
-            if (hasFireSwordItem || hasWingsofDoomItem) {
-                int fireAmplifier = 0;
-                if (hasWingsofDoomItem) {
-                    fireAmplifier = 0;
-                } else if (hasFireSwordItem) {
-                    fireAmplifier = 0;
+            Map<Class<? extends Item>, Integer> fireAmplifiers = new HashMap<>();
+            fireAmplifiers.put(FireSwordItem.class, 0);
+            fireAmplifiers.put(WingsOfDoomItem.class, 0);
+
+
+            int fireAmplifier = -1;
+
+            for (Map.Entry<Class<? extends Item>, Integer> entry : fireAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                    fireAmplifier = entry.getValue();
+                    break;
                 }
-                if (!player.hasEffect(MobEffects.FIRE_RESISTANCE) || player.getEffect(MobEffects.FIRE_RESISTANCE).getAmplifier() != fireAmplifier) {
-                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, fireAmplifier, false, false, true));
-                }
-            } else {
-                player.removeEffect(MobEffects.FIRE_RESISTANCE);
             }
+            if (fireAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.FIRE_RESISTANCE);
+                if (currentEffect == null || currentEffect.getAmplifier() < fireAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, fireAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.FIRE_RESISTANCE.getRegisteredName().toString(), true);
+                }
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.FIRE_RESISTANCE.getRegisteredName().toString())) {
+                player.removeEffect(MobEffects.FIRE_RESISTANCE);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.FIRE_RESISTANCE.getRegisteredName().toString());
+            }
+
+
 
             //Damage Boost//
-            if (hasGimlisAxeItem || hasWingsofDoomItem || hasStrengthHammerItem || hasDarknessMaceItem || hasLanceItem) {
-                int strengthAmplifier = 0;
-                if (hasWingsofDoomItem) {
-                    strengthAmplifier = 1;
-                } else if (hasGimlisAxeItem) {
-                    strengthAmplifier = 0;
-                } else if (hasDarknessMaceItem) {
-                    strengthAmplifier = 0;
-                }else if (hasStrengthHammerItem) {
-                    strengthAmplifier = 3;
-                }else if (hasLanceItem) {
-                    strengthAmplifier = 0;
+            Map<Class<? extends Item>, Integer> strengthAmplifiers = new HashMap<>();
+            strengthAmplifiers.put(WingsOfDoomItem.class, 1);
+            strengthAmplifiers.put(GimlisAxeItem.class, 0);
+            strengthAmplifiers.put(DarknessMaceItem.class, 0);
+            strengthAmplifiers.put(StrengthsHammerItem.class, 3);
+            strengthAmplifiers.put(LanceItem.class, 0);
+
+            int strengthAmplifier = -1;
+
+            for (Map.Entry<Class<? extends Item>, Integer> entry : strengthAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                    strengthAmplifier = entry.getValue();
+                    break;
                 }
-                if (!player.hasEffect(MobEffects.DAMAGE_BOOST) || player.getEffect(MobEffects.DAMAGE_BOOST).getAmplifier() != strengthAmplifier) {
-                    player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 12000, strengthAmplifier, false, false, true));
-                }
-            } else {
-                player.removeEffect(MobEffects.DAMAGE_BOOST);
             }
 
+            if (strengthAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.DAMAGE_BOOST);
+                if (currentEffect == null || currentEffect.getAmplifier() < strengthAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 12000, strengthAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.DAMAGE_BOOST.getRegisteredName().toString(), true);
+                }
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.DAMAGE_BOOST.getRegisteredName().toString())) {
+                player.removeEffect(MobEffects.DAMAGE_BOOST);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.DAMAGE_BOOST.getRegisteredName().toString());
+            }
+
+
+
             //Movement Speed//
-            if (hasLanceItem || hasWingsofDoomItem || hasSwiftnessDaggerItem) {
-                int speedAmplifier = 0;
+            Map<Class<? extends Item>, Integer> speedAmplifiers = new HashMap<>();
+            speedAmplifiers.put(WingsOfDoomItem.class, 1);
+            speedAmplifiers.put(LanceItem.class, 0);
+            speedAmplifiers.put(SwiftnessDaggerItem.class, 2);
 
-                if (hasWingsofDoomItem) {
-                    speedAmplifier = 1;
-                } else if (hasLanceItem) {
-                    speedAmplifier = 0;
-                }else if (hasSwiftnessDaggerItem) {
-                    speedAmplifier = 2;
-                }
+            int SpeedAmplifier = -1;
 
-                if (!player.hasEffect(MobEffects.MOVEMENT_SPEED) || player.getEffect(MobEffects.MOVEMENT_SPEED).getAmplifier() != speedAmplifier) {
-                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 12000, speedAmplifier, false, false, true));
+            for (Map.Entry<Class<? extends Item>, Integer> entry : speedAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                    SpeedAmplifier = entry.getValue();
+                    break;
                 }
-            } else {
+            }
+
+            if (SpeedAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.MOVEMENT_SPEED);
+                if (currentEffect == null || currentEffect.getAmplifier() < SpeedAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 12000, SpeedAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.MOVEMENT_SPEED.getRegisteredName().toString(), true);
+                }
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.MOVEMENT_SPEED.getRegisteredName().toString())) {
                 player.removeEffect(MobEffects.MOVEMENT_SPEED);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.MOVEMENT_SPEED.getRegisteredName().toString());
             }
 
 
             //DAMAGE_RESISTANCE//
-            if (hasGimlisAxeItem || hasWingsofDoomItem) {
-                int resAmplifier = 0;
-                if (hasGimlisAxeItem) {
-                    resAmplifier = 1;
-                }else if (hasWingsofDoomItem) {
-                    resAmplifier = 0;
+            Map<Class<? extends Item>, Integer> resAmplifiers = new HashMap<>();
+            resAmplifiers.put(WingsOfDoomItem.class, 0);
+            resAmplifiers.put(GimlisAxeItem.class, 1);
+
+            int resAmplifier = -1;
+
+            for (Map.Entry<Class<? extends Item>, Integer> entry : resAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                    resAmplifier = entry.getValue();
+                    break;
                 }
-                if (!player.hasEffect(MobEffects.DAMAGE_RESISTANCE) || player.getEffect(MobEffects.DAMAGE_RESISTANCE).getAmplifier() != resAmplifier) {
+            }
+
+            if (resAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.DAMAGE_RESISTANCE);
+                if (currentEffect == null || currentEffect.getAmplifier() < resAmplifier) {
                     player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12000, resAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.DAMAGE_RESISTANCE.getRegisteredName().toString(), true);
                 }
-            } else {
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.DAMAGE_RESISTANCE.getRegisteredName().toString())) {
                 player.removeEffect(MobEffects.DAMAGE_RESISTANCE);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.DAMAGE_RESISTANCE.getRegisteredName().toString());
             }
 
 
             //SATURATION//
-            if (hasWingsofDoomItem) {
-                int satAmplifier = 0;
-                if (hasWingsofDoomItem) {
-                    satAmplifier = 0;
+            Map<Class<? extends Item>, Integer> satAmplifiers = new HashMap<>();
+            satAmplifiers.put(WingsOfDoomItem.class, 0);
+
+            int satAmplifier = -1;
+
+            for (Map.Entry<Class<? extends Item>, Integer> entry : satAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                    satAmplifier = entry.getValue();
+                    break;
                 }
-                if (!player.hasEffect(MobEffects.SATURATION) || player.getEffect(MobEffects.SATURATION).getAmplifier() != satAmplifier) {
+            }
+
+            if (satAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.SATURATION);
+                if (currentEffect == null || currentEffect.getAmplifier() < satAmplifier) {
                     player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 12000, satAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.SATURATION.getRegisteredName().toString(), true);
                 }
-            } else {
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.SATURATION.getRegisteredName().toString())) {
                 player.removeEffect(MobEffects.SATURATION);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.SATURATION.getRegisteredName().toString());
             }
 
 
             //NIGHT_VISION//
-            if (hasWingsofDoomItem) {
-                int nightAmplifier = 0;
-                if (hasWingsofDoomItem) {
-                    nightAmplifier = 0;
+            Map<Class<? extends Item>, Integer> nightAmplifiers = new HashMap<>();
+            nightAmplifiers.put(WingsOfDoomItem.class, 0);
+
+            int nightAmplifier = -1;
+
+            for (Map.Entry<Class<? extends Item>, Integer> entry : nightAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                    nightAmplifier = entry.getValue();
+                    break;
                 }
-                if (!player.hasEffect(MobEffects.NIGHT_VISION) || player.getEffect(MobEffects.NIGHT_VISION).getAmplifier() != nightAmplifier) {
+            }
+
+            if (nightAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.NIGHT_VISION);
+                if (currentEffect == null || currentEffect.getAmplifier() < nightAmplifier) {
                     player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 12000, nightAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.NIGHT_VISION.getRegisteredName().toString(), true);
                 }
-            } else {
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.NIGHT_VISION.getRegisteredName().toString())) {
                 player.removeEffect(MobEffects.NIGHT_VISION);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.NIGHT_VISION.getRegisteredName().toString());
             }
 
 
