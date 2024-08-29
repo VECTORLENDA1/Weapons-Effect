@@ -128,6 +128,7 @@ public class EventEffectItems {
             Map<Class<? extends Item>, Integer> resAmplifiers = new HashMap<>();
             resAmplifiers.put(WingsOfDoomItem.class, 0);
             resAmplifiers.put(GimlisAxeItem.class, 1);
+            resAmplifiers.put(DarknessMaceItem.class, 0);
 
             int resAmplifier = -1;
 

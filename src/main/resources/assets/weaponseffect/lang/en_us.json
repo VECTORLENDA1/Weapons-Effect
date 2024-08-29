@@ -1,4 +1,7 @@
 {
+
+
+  "1":             "||ITEMS||",
   "item.weaponseffect.celestine": "Celestine Gem",
   "item.weaponseffect.zenithra": "Zenithra Gem",
   "item.weaponseffect.astralite": "Astralite",
@@ -10,6 +13,9 @@
   "item.weaponseffect.antracite": "Antracite",
 
 
+
+
+  "2":             "||BLOCKS||",
   "block.weaponseffect.end_stone_celestine_ore": "End Stone Celestine Ore",
   "block.weaponseffect.nexalite_block": "Block of Nexalite",
   "block.weaponseffect.ignithra_block": "Block of Ignithra",
@@ -29,6 +35,8 @@
 
 
 
+
+  "3":             "||WEAPONS||",
   "item.weaponseffect.fire_sword": "Fire Sword",
   "item.weaponseffect.wither_sword": "Wither Sword",
   "item.weaponseffect.blindness_dagger": "Blindness Dagger",
@@ -40,6 +48,103 @@
   "item.weaponseffect.strengths_hammer": "Strength Hammer",
   "item.weaponseffect.wings_of_doom": "Wings of Doom",
   "item.weaponseffect.swiftness_dagger": "Swiftness Dagger",
+
+
+
+  "4":            "||TOOLTIPS||",
+
+
+  "5":        "||Blindness_Dagger||",
+  "blindness.dagger.tooltip": "Inflicts Blindness",
+  "blindness.line.2": " ",
+  "blindness.immunities": "IMMUNITIES",
+  "blindness.immunities.tooltip": "Blindness",
+
+
+
+  "6":         "||Darkness_Mace||",
+  "darkness.mace.tooltip": "Inflicts Darkness",
+  "darkness.line.2": " ",
+  "darkness.immunities": "IMMUNITIES",
+  "darkness.immunities.tooltip": "Darkness",
+
+
+
+  "7":         "||Fire_Sword||",
+  "fire.sword.tooltip": "Inflicts Fire",
+  "fire.line.2": " ",
+  "fire.immunities": "IMMUNITIES",
+  "fire.immunities.tooltip": "Fire",
+
+
+
+  "8":         "||Gimli's_Axe||",
+  "gimlis.axe.tooltip": "Inflicts Slowness",
+
+
+
+  "9":         "||Ice_Sword||",
+  "ice.sword.tooltip": "Inflicts slowness that drain life",
+  "ice.line.2": " ",
+  "ice.immunities": "IMMUNITIES",
+  "ice.immunities.tooltip": "Slowness",
+
+
+
+  "10":         "||Lance||",
+  "lance.tooltip": "Make them Weak",
+  "lance.line.2": " ",
+  "lance.immunities": "IMMUNITIES",
+  "lance.immunities.tooltip": "Slowness",
+
+
+
+  "11":         "||Poison_Sword||",
+  "poison.sword.tooltip": "Inflicts Poison",
+  "poison.line.2": " ",
+  "poison.immunities": "IMMUNITIES",
+  "poison.immunities.tooltip": "Poison",
+
+
+
+  "12":         "||Strength_Hammer||",
+  "hammer.tooltip": "Inflicts Slowness",
+
+
+
+  "13":         "||Swiftness_Dagger||",
+  "swiftness.dagger.tooltip": "Inflicts Poison",
+  "swiftness.line.2": " ",
+  "swiftness.immunities": "IMMUNITIES",
+  "swiftness.immunities.tooltip": "Slowness",
+
+
+
+  "14":         "||Wings_of_Doom||",
+  "wings.of.doom.tooltip": "Inflicts them with Poison and Withering",
+  "wings.of.doom.tooltip.2": "make them slow, blind and weak",
+  "wings.of.doom.tooltip.3": "and with dark they can's see",
+  "wings.of.doom.line.2": " ",
+  "wings.of.doom.immunities": "IMMUNITIES",
+  "wings.of.doom.immunities.tooltip": "Blindness",
+  "wings.of.doom.immunities.tooltip.2": "Darkness",
+  "wings.of.doom.immunities.tooltip.3": "Poison",
+  "wings.of.doom.immunities.tooltip.4": "Slowness",
+  "wings.of.doom.immunities.tooltip.5": "Weakness",
+  "wings.of.doom.immunities.tooltip.6": "Wither",
+  "wings.of.doom.immunities.tooltip.7": "Fire",
+
+
+
+  "15":         "||Wither_Sword||",
+  "wither.sword.tooltip": "Inflicts Wither",
+  "wither.line.2": " ",
+  "wither.immunities": "IMMUNITIES",
+  "wither.immunities.tooltip": "Wither",
+
+
+
+
 
   "creativetab.weapons_effect": "Weapons Effect"
 }

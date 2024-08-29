@@ -1,10 +1,15 @@
 package net.vector.weaponseffect.custom;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
+
+import java.util.List;
 
 
 public class FireSwordItem extends SwordItem {
@@ -27,5 +32,14 @@ public class FireSwordItem extends SwordItem {
             }
         }
         return result;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+        pTooltipComponents.add(Component.translatable("fire.sword.tooltip").withStyle(ChatFormatting.WHITE));
+        pTooltipComponents.add(Component.translatable("fire.line.2"));
+        pTooltipComponents.add(Component.translatable("fire.immunities").withStyle(ChatFormatting.WHITE));
+        pTooltipComponents.add(Component.translatable("fire.immunities.tooltip").withStyle(ChatFormatting.RED));
+        super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
 }
