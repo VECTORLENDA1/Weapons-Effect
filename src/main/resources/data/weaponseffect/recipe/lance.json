@@ -7,13 +7,10 @@
     },
     "X": {
       "item": "weaponseffect:nexalite"
-    },
-    "B": {
-      "item": "minecraft:iron_block"
     }
   },
   "pattern": [
-    " XB",
+    " XX",
     " #X",
     "#  "
   ],

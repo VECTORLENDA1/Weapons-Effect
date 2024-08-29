@@ -13,9 +13,9 @@
     }
   },
   "pattern": [
-    " XB",
-    "XBX",
-    "#X "
+    "  X",
+    " B ",
+    "#  "
   ],
   "result": {
     "count": 1,
