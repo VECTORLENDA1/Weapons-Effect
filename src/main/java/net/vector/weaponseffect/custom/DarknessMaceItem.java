@@ -19,7 +19,8 @@ public class DarknessMaceItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        pTarget.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 200,3), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 200,10), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200,1), pAttacker);
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
 

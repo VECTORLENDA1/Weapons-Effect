@@ -15,11 +15,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.effect.ModEffect;
+import net.vector.weaponseffect.entity.ModEntities;
 import net.vector.weaponseffect.item.ModCreativeModTabs;
 import net.vector.weaponseffect.item.ModItems;
+import net.vector.weaponseffect.registry.ModParticles;
 import org.slf4j.Logger;
-
-
 
 @Mod(WeaponsEffect.MOD_ID)
 public class WeaponsEffect {
@@ -37,6 +37,8 @@ public class WeaponsEffect {
         ModItems.Register(modEventBus);
         ModBlocks.Register(modEventBus);
         ModEffect.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModParticles.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
 
 

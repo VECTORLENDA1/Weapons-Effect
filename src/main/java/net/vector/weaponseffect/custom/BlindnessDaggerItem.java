@@ -19,7 +19,7 @@ public class BlindnessDaggerItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        pTarget.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200,3), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200,5), pAttacker);
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
 

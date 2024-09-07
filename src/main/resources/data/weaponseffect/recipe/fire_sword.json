@@ -5,15 +5,12 @@
     "#": {
       "item": "minecraft:blaze_rod"
     },
-    "X": {
-      "item": "weaponseffect:ignithra"
-    },
     "B": {
       "item": "weaponseffect:ignithra_block"
     }
   },
   "pattern": [
-    "  X",
+    "  B",
     " B ",
     "#  "
   ],

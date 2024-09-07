@@ -30,10 +30,18 @@ public class WingsOfDoomItem extends SwordItem {
         target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 3), attacker);
         target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 100, 3), attacker);
         target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 4), attacker);
+        target.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100, 2), attacker);
 
 
         if (result && !target.level().isClientSide() && !target.fireImmune()) {
             target.igniteForSeconds(20);
+        }else {
+            for (int var1 = 0; var1 < 20; ++var1) {
+                double px = target.getX() + target.level().getRandom().nextFloat() * target.getBbWidth() * 2.0F - target.getBbWidth();
+                double py = target.getY() + target.level().getRandom().nextFloat() * target.getBbHeight();
+                double pz = target.getZ() + target.level().getRandom().nextFloat() * target.getBbWidth() * 2.0F - target.getBbWidth();
+                target.level().addParticle(ParticleTypes.FLAME, px, py, pz, 0.02, 0.02, 0.02);
+            }
         }
         return result;
     }
