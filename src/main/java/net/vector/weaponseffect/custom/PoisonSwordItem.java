@@ -19,10 +19,9 @@ public class PoisonSwordItem extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-        pTarget.addEffect(new MobEffectInstance(MobEffects.POISON, 200,5), pAttacker);
+        pTarget.addEffect(new MobEffectInstance(MobEffects.POISON, 200,10), pAttacker);
         return super.hurtEnemy(pStack, pTarget, pAttacker);
     }
-
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {

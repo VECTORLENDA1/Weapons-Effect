@@ -1,7 +1,5 @@
 package net.vector.weaponseffect.item;
 
-import net.minecraft.client.gui.components.Tooltip;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,9 +9,6 @@ import net.vector.weaponseffect.WeaponsEffect;
 import net.vector.weaponseffect.custom.*;
 import net.vector.weaponseffect.item.custom.FuelItem;
 import net.vector.weaponseffect.item.custom.ModToolTiers;
-import net.vector.weaponseffect.util.ModTags;
-
-import java.util.List;
 
 
 public class ModItems {
