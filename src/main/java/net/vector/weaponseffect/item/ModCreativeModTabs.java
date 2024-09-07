@@ -20,6 +20,8 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CELESTINE.get()))
                 .title(Component.translatable("creativetab.weapons_effect"))
                 .displayItems((pParameters, pOutput) -> {
+
+                    //ITEMS//
                     pOutput.accept(ModItems.CELESTINE.get());
                     pOutput.accept(ModItems.ZENITHRA.get());
                     pOutput.accept(ModItems.ASTRALITE.get());
@@ -30,6 +32,8 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModItems.RAW_IGNITHRA.get());
                     pOutput.accept(ModItems.ANTRACITE.get());
 
+
+                    //BLOCKS//
                     pOutput.accept(ModBlocks.END_STONE_CELESTINE_ORE.get());
                     pOutput.accept(ModBlocks.NEXALITE_BLOCK.get());
                     pOutput.accept(ModBlocks.IGNITHRA_BLOCK.get());
@@ -48,7 +52,7 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModBlocks.ANTRACITE_BLOCK.get());
 
 
-                    //WEAPONS
+                    //WEAPONS//
                     pOutput.accept(ModItems.FIRE_SWORD.get());
                     pOutput.accept(ModItems.WITHER_SWORD.get());
                     pOutput.accept(ModItems.BLINDNESS_DAGGER.get());
