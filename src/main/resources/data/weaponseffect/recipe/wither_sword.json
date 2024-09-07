@@ -5,15 +5,12 @@
     "#": {
       "item": "minecraft:stick"
     },
-    "X": {
-      "item": "weaponseffect:nexalite"
-    },
     "B": {
       "item": "weaponseffect:nexalite_block"
     }
   },
   "pattern": [
-    "  X",
+    "  B",
     " B ",
     "#  "
   ],

@@ -3,18 +3,24 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "minecraft:end_rod"
     },
     "X": {
       "item": "weaponseffect:astralite_block"
     },
     "B": {
       "item": "weaponseffect:nexalite_block"
+    },
+    "A": {
+      "item": "weaponseffect:zenithra_block"
+    },
+    "C": {
+      "item": "weaponseffect:celestine_block"
     }
   },
   "pattern": [
-    "XBX",
-    "BXB",
+    "XAX",
+    "BCB",
     " # "
   ],
   "result": {
