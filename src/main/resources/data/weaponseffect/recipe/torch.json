@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "weaponseffect:antracite"
+    }
+  },
+  "pattern": [
+    "B",
+    "#"
+  ],
+  "result": {
+    "count": 12,
+    "id": "minecraft:torch"
+  }
+}
