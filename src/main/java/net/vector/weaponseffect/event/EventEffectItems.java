@@ -49,7 +49,7 @@ public class EventEffectItems {
             int fireAmplifier = -1;
 
             for (Map.Entry<Class<? extends Item>, Integer> entry : fireAmplifiers.entrySet()) {
-                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
                     fireAmplifier = entry.getValue();
                     break;
                 }
@@ -69,16 +69,16 @@ public class EventEffectItems {
 
             //Damage Boost//
             Map<Class<? extends Item>, Integer> strengthAmplifiers = new HashMap<>();
-            strengthAmplifiers.put(WingsOfDoomItem.class, 1);
-            strengthAmplifiers.put(GimlisAxeItem.class, 0);
-            strengthAmplifiers.put(DarknessMaceItem.class, 0);
-            strengthAmplifiers.put(StrengthsHammerItem.class, 3);
-            strengthAmplifiers.put(LanceItem.class, 0);
+            strengthAmplifiers.put(WingsOfDoomItem.class, 2);
+            strengthAmplifiers.put(GimlisAxeItem.class, 1);
+            strengthAmplifiers.put(DarknessMaceItem.class, 2);
+            strengthAmplifiers.put(StrengthsHammerItem.class, 5);
+            strengthAmplifiers.put(LanceItem.class, 1);
 
             int strengthAmplifier = -1;
 
             for (Map.Entry<Class<? extends Item>, Integer> entry : strengthAmplifiers.entrySet()) {
-                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
                     strengthAmplifier = entry.getValue();
                     break;
                 }
@@ -99,14 +99,14 @@ public class EventEffectItems {
 
             //Movement Speed//
             Map<Class<? extends Item>, Integer> speedAmplifiers = new HashMap<>();
-            speedAmplifiers.put(WingsOfDoomItem.class, 1);
-            speedAmplifiers.put(LanceItem.class, 0);
-            speedAmplifiers.put(SwiftnessDaggerItem.class, 2);
+            speedAmplifiers.put(WingsOfDoomItem.class, 2);
+            speedAmplifiers.put(LanceItem.class, 1);
+            speedAmplifiers.put(SwiftnessDaggerItem.class, 3);
 
             int SpeedAmplifier = -1;
 
             for (Map.Entry<Class<? extends Item>, Integer> entry : speedAmplifiers.entrySet()) {
-                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
                     SpeedAmplifier = entry.getValue();
                     break;
                 }
@@ -126,14 +126,15 @@ public class EventEffectItems {
 
             //DAMAGE_RESISTANCE//
             Map<Class<? extends Item>, Integer> resAmplifiers = new HashMap<>();
-            resAmplifiers.put(WingsOfDoomItem.class, 0);
-            resAmplifiers.put(GimlisAxeItem.class, 1);
-            resAmplifiers.put(DarknessMaceItem.class, 0);
+            resAmplifiers.put(WingsOfDoomItem.class, 1);
+            resAmplifiers.put(GimlisAxeItem.class, 2);
+            resAmplifiers.put(DarknessMaceItem.class, 2);
+            resAmplifiers.put(WitherSwordItem.class, 0);
 
             int resAmplifier = -1;
 
             for (Map.Entry<Class<? extends Item>, Integer> entry : resAmplifiers.entrySet()) {
-                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
                     resAmplifier = entry.getValue();
                     break;
                 }
@@ -158,7 +159,7 @@ public class EventEffectItems {
             int satAmplifier = -1;
 
             for (Map.Entry<Class<? extends Item>, Integer> entry : satAmplifiers.entrySet()) {
-                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
                     satAmplifier = entry.getValue();
                     break;
                 }
@@ -183,7 +184,7 @@ public class EventEffectItems {
             int nightAmplifier = -1;
 
             for (Map.Entry<Class<? extends Item>, Integer> entry : nightAmplifiers.entrySet()) {
-                if (entry.getKey().isInstance(mainHandItem.getItem())) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
                     nightAmplifier = entry.getValue();
                     break;
                 }
@@ -198,6 +199,30 @@ public class EventEffectItems {
             } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.NIGHT_VISION.getRegisteredName().toString())) {
                 player.removeEffect(MobEffects.NIGHT_VISION);
                 player.getPersistentData().remove(EFFECT_TAG + MobEffects.NIGHT_VISION.getRegisteredName().toString());
+            }
+
+            //REGENERATION//
+            Map<Class<? extends Item>, Integer> regenAmplifiers = new HashMap<>();
+            regenAmplifiers.put(WingsOfDoomItem.class, 0);
+
+            int regenAmplifier = -1;
+
+            for (Map.Entry<Class<? extends Item>, Integer> entry : regenAmplifiers.entrySet()) {
+                if (entry.getKey().isInstance(mainHandItem.getItem()) || entry.getKey().isInstance(offHandItem.getItem())) {
+                    regenAmplifier = entry.getValue();
+                    break;
+                }
+            }
+
+            if (regenAmplifier >= 0) {
+                MobEffectInstance currentEffect = player.getEffect(MobEffects.REGENERATION);
+                if (currentEffect == null || currentEffect.getAmplifier() < regenAmplifier) {
+                    player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 12000, regenAmplifier, false, false, true));
+                    player.getPersistentData().putBoolean(EFFECT_TAG + MobEffects.REGENERATION.getRegisteredName().toString(), true);
+                }
+            } else if (player.getPersistentData().getBoolean(EFFECT_TAG + MobEffects.REGENERATION.getRegisteredName().toString())) {
+                player.removeEffect(MobEffects.REGENERATION);
+                player.getPersistentData().remove(EFFECT_TAG + MobEffects.REGENERATION.getRegisteredName().toString());
             }
 
 

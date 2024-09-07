@@ -75,6 +75,11 @@
   "fire.line.2": " ",
   "fire.immunities": "IMMUNITIES",
   "fire.immunities.tooltip": "Fire",
+  "fire.line.3": " ",
+  "fire.ability": "ABILITY",
+  "fire.ability.name": "Blazing Gaze",
+  "fire.line.4": " ",
+  "fire.ability.description": "Create an area of flames where you look",
 
 
 
@@ -109,6 +114,11 @@
 
   "12":         "||Strength_Hammer||",
   "hammer.tooltip": "Inflicts Slowness",
+  "hammer.line.2": " ",
+  "hammer.ability": "ABILITY",
+  "hammer.ability.name": "Explosion",
+  "hammer.line.3": " ",
+  "hammer.ability.description": "Create an explosive area dealing massive damage",
 
 
 
@@ -141,9 +151,18 @@
   "wither.line.2": " ",
   "wither.immunities": "IMMUNITIES",
   "wither.immunities.tooltip": "Wither",
+  "wither.line.3": " ",
+  "wither.ability": "ABILITY",
+  "wither.ability.name": "Wither Rain",
+  "wither.line.4": " ",
+  "wither.ability.description": "Launch wither skulls from your sword",
 
 
 
+  "16":         "||Abilities||",
+  "item.hammer.cooldown": "Hammer on Cooldown",
+  "item.wither_sword.cooldown": "Wither Sword on Cooldown",
+  "item.fire.sword.cooldown": "Fire Sword on Cooldown",
 
 
   "creativetab.weapons_effect": "Weapons Effect"
