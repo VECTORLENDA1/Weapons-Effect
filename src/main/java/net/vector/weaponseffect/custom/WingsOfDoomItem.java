@@ -3,22 +3,24 @@ package net.vector.weaponseffect.custom;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import net.vector.weaponseffect.entity.BlackHoleEntity;
 
 import java.util.List;
+
 
 public class WingsOfDoomItem extends SwordItem {
     public WingsOfDoomItem(Tier pTier, Properties pProperties) {
         super(pTier, pProperties);
     }
-
-
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -46,7 +48,6 @@ public class WingsOfDoomItem extends SwordItem {
         return result;
     }
 
-
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         pTooltipComponents.add(Component.translatable("wings.of.doom.tooltip").withStyle(ChatFormatting.WHITE));
@@ -63,4 +64,32 @@ public class WingsOfDoomItem extends SwordItem {
         pTooltipComponents.add(Component.translatable("wings.of.doom.immunities.tooltip.7").withStyle(ChatFormatting.RED));
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+        if (!world.isClientSide) {
+            Vec3 lookVec = player.getLookAngle();
+            Vec3 eyePosition = player.getEyePosition(1.0f);
+            Vec3 spawnPosition = eyePosition.add(lookVec.scale(5.0));
+
+
+            int lifetime = BlackHoleEntity.DEFAULT_LIFETIME;
+            float maxRadius = BlackHoleEntity.DEFAULT_MAX_RADIUS;
+
+            BlackHoleEntity blackHole = new BlackHoleEntity(
+                    world,
+                    spawnPosition.x, spawnPosition.y, spawnPosition.z,
+                    lifetime,
+                    maxRadius,
+                    player.getUUID()
+            );
+
+            world.addFreshEntity(blackHole);
+
+            player.getCooldowns().addCooldown(this, 0);
+        }
+        return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), world.isClientSide());
+    }
 }
+
+
