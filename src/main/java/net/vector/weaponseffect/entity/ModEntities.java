@@ -1,5 +1,6 @@
 package net.vector.weaponseffect.entity;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.projectile.ThrownTrident;
@@ -8,17 +9,29 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
-import net.vector.weaponseffect.entity.projectile.ThrownLance;
+
+import static net.vector.weaponseffect.WeaponsEffect.MOD_ID;
+
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, WeaponsEffect.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MOD_ID);
 
     public static final RegistryObject<EntityType<ThrownTrident>> THROWN_LANCE = ENTITY_TYPES.register("thrown_lance",
             () -> EntityType.Builder.<ThrownTrident>of(ThrownTrident::new, MobCategory.MISC)
                     .sized(0.5F, 0.5F)
-                    .build(WeaponsEffect.MOD_ID + ":thrown_lance")
+                    .build(MOD_ID + ":thrown_lance")
     );
+
+    public static final RegistryObject<EntityType<BlackHoleEntity>> BLACK_HOLE = ENTITY_TYPES.register("black_hole",
+            () -> EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MISC)
+                    .sized(2.0F, 2.0F)
+                    .build(":black_hole"));
+
+    public static final RegistryObject<EntityType<CustomFallingBlockEntity>> CUSTOM_FALLING_BLOCK = ENTITY_TYPES.register("custom_falling_block",
+            () -> EntityType.Builder.<CustomFallingBlockEntity>of(CustomFallingBlockEntity::new, MobCategory.MISC)
+                    .sized(0.98F, 0.98F)  // Tamanho típico de um bloco
+                    .build(ResourceLocation.fromNamespaceAndPath(MOD_ID, "custom_falling_block").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
