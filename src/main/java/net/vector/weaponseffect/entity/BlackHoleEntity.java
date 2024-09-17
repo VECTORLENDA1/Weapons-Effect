@@ -6,25 +6,32 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import net.vector.weaponseffect.item.ModItems;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 public class BlackHoleEntity extends Entity {
-    public static final int DEFAULT_LIFETIME = 2000;
+    public static final int DEFAULT_LIFETIME = 200;
     public static final float DEFAULT_MAX_RADIUS = 10.0F;
-    private static final float GROWTH_RATE = 0.05F;
+    private static final float GROWTH_RATE = 0.08F;
 
     private int lifetime;
     private float currentRadius;
     private float maxRadius;
     private UUID ownerUUID;
+    private float size;
 
     public BlackHoleEntity(EntityType<? extends BlackHoleEntity> entityType, Level level) {
         super(entityType, level);
+        this.size = 1.0f;
     }
 
     public BlackHoleEntity(Level world, double x, double y, double z, int lifetime, float maxRadius, UUID ownerUUID) {
@@ -52,37 +59,81 @@ public class BlackHoleEntity extends Entity {
             this.currentRadius = Math.min(this.currentRadius + GROWTH_RATE, this.maxRadius);
         }
 
+        this.setSize(this.currentRadius);
+
         this.suckBlocksAndEntities();
     }
 
-    private void suckBlocksAndEntities() {
-        int range = (int) Math.ceil(this.currentRadius);
+    public float getCurrentRadius() {
+        return this.currentRadius;
+    }
+
+    public void suckBlocksAndEntities() {
+        int range = (int) Math.ceil(this.currentRadius * 3);
         BlockPos centerPos = this.blockPosition();
 
+        List<BlockPos> blocksToRemove = new ArrayList<>();
         for (BlockPos pos : BlockPos.betweenClosed(centerPos.offset(-range, -range, -range), centerPos.offset(range, range, range))) {
             double distance = Math.sqrt(pos.distSqr(centerPos));
             if (distance <= this.currentRadius) {
                 BlockState state = this.level().getBlockState(pos);
-                if (!state.isAir() && state.getDestroySpeed(this.level(), pos) >= 0) {
-                    this.level().destroyBlock(pos, false);
+                if (!state.isAir()) {
+                    if (isLiquid(state)) {
+                        // Remover líquidos diretamente
+                        this.level().setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+                    } else if (state.getDestroySpeed(this.level(), pos) >= 0) {
+                        // Destruir blocos normais
+                        this.level().destroyBlock(pos, false);
+                    }
                 }
             }
         }
 
         List<Entity> entities = this.level().getEntities(this, this.getBoundingBox().inflate(range),
                 entity -> !(entity instanceof BlackHoleEntity) && !entity.getUUID().equals(this.ownerUUID));
+
         for (Entity entity : entities) {
+            // Verifique se a entidade é um jogador
+            if (entity instanceof Player player) {
+                // Verifique se o jogador está segurando o item "WingsOfDoomItem"
+                ItemStack itemStack = player.getMainHandItem();
+                if (itemStack.getItem() == ModItems.WINGS_OF_DOOM.get()) {
+                    continue; // Ignore o jogador se ele estiver segurando o item
+                }
+            }
+
             Vec3 directionToBlackHole = this.position().subtract(entity.position()).normalize();
             double distance = entity.distanceTo(this);
-            double strength = 1.0 - (distance / this.currentRadius);
-            if (strength > 0) {
-                entity.setDeltaMovement(entity.getDeltaMovement().add(directionToBlackHole.scale(strength * 0.1)));
-                if (distance < 1.0) {
-                    if (entity instanceof LivingEntity) {
-                        entity.hurt(this.level().damageSources().magic(), 20.0F);
-                    } else {
-                        entity.discard();
-                    }
+
+            double innerZoneRadius = this.currentRadius * 1.5;
+            double middleZoneRadius = this.currentRadius * 2.25;
+            double outerZoneRadius = this.currentRadius * 3.0;
+
+            double strength;
+
+            if (distance <= this.currentRadius) {
+                strength = 3.0;//Inside Black Hole
+            } else if (distance <= innerZoneRadius) {
+                strength = 1.2;// First area
+            } else if (distance <= middleZoneRadius) {
+                strength = 0.6;// Second area
+            } else if (distance <= outerZoneRadius) {
+                strength = 0.3;// Third area
+            } else {
+                continue;//Safe to flee
+            }
+
+            Vec3 force = directionToBlackHole.scale(strength * 0.2);
+            entity.setDeltaMovement(entity.getDeltaMovement().add(force));
+            entity.hurtMarked = true;
+
+            double killRadius = this.currentRadius * 0.6;//Area of killradius insade the Black Hole
+
+            if (distance <= killRadius) {
+                if (entity instanceof LivingEntity) {
+                    entity.hurt(this.level().damageSources().magic(), 10000.0F);
+                } else {
+                    entity.discard();
                 }
             }
         }
@@ -99,5 +150,17 @@ public class BlackHoleEntity extends Entity {
 
     public Level getLevel() {
         return this.level();
+    }
+
+    public void setSize(float size) {
+        this.size = size;
+    }
+
+    public float getSize() {
+        return size;
+    }
+
+    private boolean isLiquid(BlockState state) {
+        return !state.getFluidState().isEmpty();
     }
 }

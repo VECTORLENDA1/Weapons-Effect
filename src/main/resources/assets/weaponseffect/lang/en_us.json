@@ -11,6 +11,9 @@
   "item.weaponseffect.ignithra": "Ignithra",
   "item.weaponseffect.raw_ignithra": "Raw Ignithra",
   "item.weaponseffect.antracite": "Antracite",
+  "item.weaponseffect.obscuridium": "Obscuridium",
+  "item.weaponseffect.obscurite": "Obscurite",
+  "item.weaponseffect.raw_obscuridium": "Raw Obscuridium",
 
 
 
@@ -32,6 +35,10 @@
   "block.weaponseffect.celestine_block": "Block of Celestine",
   "block.weaponseffect.antracite_block": "Block of Antracite",
   "block.weaponseffect.nether_antracite_ore": "Nether Antracite Ore",
+  "block.weaponseffect.bedrock_obscuridium_ore": "Bedrock Obscuridium Block",
+  "block.weaponseffect.obscuridium_block": "Obscuridium Block",
+  "block.weaponseffect.obscurite_block": "Obscurite Block",
+  "block.weaponseffect.raw_obscuridium_block": "Raw Obscuridium Block",
 
 
 
@@ -143,6 +150,11 @@
   "wings.of.doom.immunities.tooltip.5": "Weakness",
   "wings.of.doom.immunities.tooltip.6": "Wither",
   "wings.of.doom.immunities.tooltip.7": "Fire",
+  "wings.of.doom.line.3": " ",
+  "wings.of.doom.abilitys": "ABILITY",
+  "wings.of.doom.abilitys.name": "Black Hole",
+  "wings.of.doom.line.4": " ",
+  "wings.of.doom.ability.description": "Create a Black Hole in the World and consume everything",
 
 
 

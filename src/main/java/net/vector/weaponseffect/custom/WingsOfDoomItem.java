@@ -11,6 +11,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.vector.weaponseffect.entity.BlackHoleEntity;
 
@@ -62,6 +64,11 @@ public class WingsOfDoomItem extends SwordItem {
         pTooltipComponents.add(Component.translatable("wings.of.doom.immunities.tooltip.5").withStyle(ChatFormatting.WHITE));
         pTooltipComponents.add(Component.translatable("wings.of.doom.immunities.tooltip.6").withStyle(ChatFormatting.DARK_GRAY));
         pTooltipComponents.add(Component.translatable("wings.of.doom.immunities.tooltip.7").withStyle(ChatFormatting.RED));
+        pTooltipComponents.add(Component.translatable("wings.of.doom.line.3"));
+        pTooltipComponents.add(Component.translatable("wings.of.doom.abilitys").withStyle(ChatFormatting.WHITE));
+        pTooltipComponents.add(Component.translatable("wings.of.doom.abilitys.name").withStyle(ChatFormatting.DARK_GRAY));
+        pTooltipComponents.add(Component.translatable("wings.of.doom.line.4"));
+        pTooltipComponents.add(Component.translatable("wings.of.doom.ability.description").withStyle(ChatFormatting.WHITE));
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
 
@@ -70,7 +77,20 @@ public class WingsOfDoomItem extends SwordItem {
         if (!world.isClientSide) {
             Vec3 lookVec = player.getLookAngle();
             Vec3 eyePosition = player.getEyePosition(1.0f);
-            Vec3 spawnPosition = eyePosition.add(lookVec.scale(5.0));
+
+            HitResult hitResult = player.pick(20.0, 1.0f, false);
+            Vec3 spawnPosition;
+
+            if (hitResult.getType() == HitResult.Type.BLOCK) {
+                // Se o jogador está olhando para um bloco, use essa posição
+                BlockHitResult blockHit = (BlockHitResult) hitResult;
+                spawnPosition = new Vec3(blockHit.getBlockPos().getX() + 0.5,
+                        blockHit.getBlockPos().getY() + 0.5,
+                        blockHit.getBlockPos().getZ() + 0.5);
+            } else {
+                // Se não está olhando para um bloco, use uma distância fixa
+                spawnPosition = eyePosition.add(lookVec.scale(5.0));
+            }
 
 
             int lifetime = BlackHoleEntity.DEFAULT_LIFETIME;
@@ -86,7 +106,7 @@ public class WingsOfDoomItem extends SwordItem {
 
             world.addFreshEntity(blackHole);
 
-            player.getCooldowns().addCooldown(this, 0);
+            player.getCooldowns().addCooldown(this, 300);
         }
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), world.isClientSide());
     }
