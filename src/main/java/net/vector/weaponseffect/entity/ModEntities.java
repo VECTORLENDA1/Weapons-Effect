@@ -28,10 +28,6 @@ public class ModEntities {
                     .sized(2.0F, 2.0F)
                     .build(":black_hole"));
 
-    public static final RegistryObject<EntityType<CustomFallingBlockEntity>> CUSTOM_FALLING_BLOCK = ENTITY_TYPES.register("custom_falling_block",
-            () -> EntityType.Builder.<CustomFallingBlockEntity>of(CustomFallingBlockEntity::new, MobCategory.MISC)
-                    .sized(0.98F, 0.98F)  // Tamanho típico de um bloco
-                    .build(ResourceLocation.fromNamespaceAndPath(MOD_ID, "custom_falling_block").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

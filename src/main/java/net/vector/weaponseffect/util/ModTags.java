@@ -6,9 +6,11 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.vector.weaponseffect.WeaponsEffect;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> BEDROCK_REPLACEABLES = tag("bedrock_replaceables");
 
 
         private static TagKey<Block> tag(String name) {

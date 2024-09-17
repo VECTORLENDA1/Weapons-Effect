@@ -72,6 +72,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> ANTRACITE_BLOCK = registerBlockItem("antracite_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f,6).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> RAW_OBSCURIDIUM_BLOCK = registerBlockItem("raw_obscuridium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(6f,20).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> OBSCURITE_BLOCK = registerBlockItem("obscurite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f,10).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> OBSCURIDIUM_BLOCK = registerBlockItem("obscuridium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(6f,20).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+    public static final RegistryObject<Block> BEDROCK_OBSCURIDIUM_ORE = registerBlockItem("bedrock_obscuridium_ore",
+            () -> new BedrockObscuridiumOreBlock(BlockBehaviour.Properties.of()
+                    .strength(9999f).sound(SoundType.STONE)));
 
 
 

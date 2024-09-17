@@ -31,6 +31,9 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModItems.IGNITHRA.get());
                     pOutput.accept(ModItems.RAW_IGNITHRA.get());
                     pOutput.accept(ModItems.ANTRACITE.get());
+                    pOutput.accept(ModItems.RAW_OBSCURIDIUM.get());
+                    pOutput.accept(ModItems.OBSCURIDIUM.get());
+                    pOutput.accept(ModItems.OBSCURITE.get());
 
 
                     //BLOCKS//
@@ -50,6 +53,10 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModBlocks.DEEPSLATE_NEXALITE_ORE.get());
                     pOutput.accept(ModBlocks.NETHER_ANTRACITE_ORE.get());
                     pOutput.accept(ModBlocks.ANTRACITE_BLOCK.get());
+                    pOutput.accept(ModBlocks.BEDROCK_OBSCURIDIUM_ORE.get());
+                    pOutput.accept(ModBlocks.OBSCURIDIUM_BLOCK.get());
+                    pOutput.accept(ModBlocks.RAW_OBSCURIDIUM_BLOCK.get());
+                    pOutput.accept(ModBlocks.OBSCURITE_BLOCK.get());
 
 
                     //WEAPONS//

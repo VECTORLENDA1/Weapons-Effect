@@ -36,6 +36,12 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ANTRACITE = ITEMS.register("antracite",
             () -> new FuelItem(new Item.Properties(), 3200));
+    public static final RegistryObject<Item> RAW_OBSCURIDIUM = ITEMS.register("raw_obscuridium",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OBSCURIDIUM = ITEMS.register("obscuridium",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> OBSCURITE = ITEMS.register("obscurite",
+            () -> new Item(new Item.Properties()));
 
 
 
