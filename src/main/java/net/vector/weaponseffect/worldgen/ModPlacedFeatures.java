@@ -23,6 +23,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> DEEPSLATE_NEXALITE_ORE_PLACED_KEY = registerKey( "deepslate_nexalite_ore_placed");
     public static final ResourceKey<PlacedFeature> DEEPSLATE_ASTRALITE_ORE_PLACED_KEY = registerKey( "deepslate_astralite_ore_placed");
     public static final ResourceKey<PlacedFeature> DEEPSLATE_IGNITHRA_ORE_PLACED_KEY = registerKey( "deepslate_ignithra_ore_placed");
+    public static final ResourceKey<PlacedFeature> BEDROCK_OBSCURIDIUM_ORE_PLACED_KEY = registerKey( "bedrock_obscuridium_ore_placed");
 
     public static void bootstrap(BootstrapContext <PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -45,7 +46,7 @@ public class ModPlacedFeatures {
 
         register(context, DEEPSLATE_ASTRALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_ASTRALITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-30))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-58), VerticalAnchor.absolute(-30))));
 
         register(context, DEEPSLATE_IGNITHRA_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_IGNITHRA_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
@@ -53,7 +54,11 @@ public class ModPlacedFeatures {
 
         register(context, DEEPSLATE_NEXALITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_NEXALITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-30))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-58), VerticalAnchor.absolute(-30))));
+
+        register(context, BEDROCK_OBSCURIDIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BEDROCK_OBSCURIDIUM_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(4,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-63), VerticalAnchor.absolute(-59))));
     }
 
 

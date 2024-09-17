@@ -23,6 +23,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_NEXALITE_ORE = registerKey("add_deepslate_nexalite_ore");
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_ASTRALITE_ORE = registerKey("add_deepslate-astralite_ore");
     public static final ResourceKey<BiomeModifier> ADD_DEEPSLATE_IGNITHRA_ORE = registerKey("add_deepslate_ignithra_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BEDROCK_OBSCURIDIUM_ORE = registerKey("add_bedrock_obscuridium_ore");
 
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -62,6 +63,11 @@ public class ModBiomeModifiers {
         context.register(ADD_NETHER_ANTRACITE_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
                 HolderSet.direct(placeFeatures.getOrThrow(ModPlacedFeatures.NETHER_ANTRACITE_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_BEDROCK_OBSCURIDIUM_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placeFeatures.getOrThrow(ModPlacedFeatures.BEDROCK_OBSCURIDIUM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
 
