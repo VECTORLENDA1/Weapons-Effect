@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 450,
+  "experience": 27,
+  "group": "obscuridium",
+  "ingredient": {
+    "item": "weaponseffect:raw_obscuridium_block"
+  },
+  "result": {
+    "id": "weaponseffect:obscuridium_block"
+  }
+}
