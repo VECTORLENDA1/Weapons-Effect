@@ -1,6 +1,7 @@
 package net.vector.weaponseffect;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.client.renderer.BlackHoleRenderer;
+import net.vector.weaponseffect.crafting.ModAnvilRecipe;
 import net.vector.weaponseffect.effect.ModEffect;
 import net.vector.weaponseffect.entity.ModEntities;
 import net.vector.weaponseffect.item.ModCreativeModTabs;
@@ -41,6 +43,8 @@ public class WeaponsEffect {
         ModParticles.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
 
+        new ModAnvilRecipe();
+
         modEventBus.addListener(this::addCreative);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -59,7 +63,7 @@ public class WeaponsEffect {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
         }
 
         @SubscribeEvent
@@ -71,8 +75,6 @@ public class WeaponsEffect {
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
-
     }
 
 }
