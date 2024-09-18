@@ -34,7 +34,7 @@ public class EventEffectItems {
             boolean hasIceSwordItem = mainHandItem.getItem() instanceof IceSwordItem;
             boolean hasLanceItem = mainHandItem.getItem() instanceof LanceItem;
             boolean hasPoisonSwordItem = mainHandItem.getItem() instanceof PoisonSwordItem;
-            boolean hasStrengthHammerItem = mainHandItem.getItem() instanceof HammerItem;
+            boolean hashHammerItem = mainHandItem.getItem() instanceof HammerItem;
             boolean hasSwiftnessDaggerItem = mainHandItem.getItem() instanceof SwiftnessDaggerItem;
             boolean hasWingsofDoomItem = mainHandItem.getItem() instanceof WingsOfDoomItem;
             boolean hasWitherSwordItem = mainHandItem.getItem() instanceof WitherSwordItem;
@@ -272,7 +272,7 @@ public class EventEffectItems {
             }
 
             //Wither//
-            if (hasWitherSwordItem || hasWingsofDoomItem || hasIceSwordItem) {
+            if (hasWitherSwordItem || hasWingsofDoomItem) {
                 if (player.hasEffect(MobEffects.WITHER)) {
                     player.removeEffect(MobEffects.WITHER);
                 }
