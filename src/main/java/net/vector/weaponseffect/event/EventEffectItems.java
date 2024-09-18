@@ -34,7 +34,7 @@ public class EventEffectItems {
             boolean hasIceSwordItem = mainHandItem.getItem() instanceof IceSwordItem;
             boolean hasLanceItem = mainHandItem.getItem() instanceof LanceItem;
             boolean hasPoisonSwordItem = mainHandItem.getItem() instanceof PoisonSwordItem;
-            boolean hasStrengthHammerItem = mainHandItem.getItem() instanceof StrengthsHammerItem;
+            boolean hasStrengthHammerItem = mainHandItem.getItem() instanceof HammerItem;
             boolean hasSwiftnessDaggerItem = mainHandItem.getItem() instanceof SwiftnessDaggerItem;
             boolean hasWingsofDoomItem = mainHandItem.getItem() instanceof WingsOfDoomItem;
             boolean hasWitherSwordItem = mainHandItem.getItem() instanceof WitherSwordItem;
@@ -72,7 +72,7 @@ public class EventEffectItems {
             strengthAmplifiers.put(WingsOfDoomItem.class, 2);
             strengthAmplifiers.put(GimlisAxeItem.class, 1);
             strengthAmplifiers.put(DarknessMaceItem.class, 2);
-            strengthAmplifiers.put(StrengthsHammerItem.class, 5);
+            strengthAmplifiers.put(HammerItem.class, 5);
             strengthAmplifiers.put(LanceItem.class, 1);
 
             int strengthAmplifier = -1;

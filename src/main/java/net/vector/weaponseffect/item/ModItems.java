@@ -71,9 +71,9 @@ public class ModItems {
     public static final RegistryObject<Item> POISON_SWORD = ITEMS.register("poison_sword",
             () -> new PoisonSwordItem(ModToolTiers.POISON_SWORD, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.POISON_SWORD, 4, -2.4F))));
-    public static final RegistryObject<Item> STRENGTHS_HAMMER = ITEMS.register("strengths_hammer",
-            () -> new StrengthsHammerItem(ModToolTiers.STRENGTHS_HAMMER, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.STRENGTHS_HAMMER, 10, -3.2F))));
+    public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer",
+            () -> new HammerItem(ModToolTiers.HAMMER, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.HAMMER, 10, -3.2F))));
     public static final RegistryObject<Item> WINGS_OF_DOOM = ITEMS.register("wings_of_doom",
             () -> new WingsOfDoomItem(ModToolTiers.WINGS_OF_DOOM, new Item.Properties().fireResistant()
                     .attributes(SwordItem.createAttributes(ModToolTiers.WINGS_OF_DOOM, 18, -0F))));

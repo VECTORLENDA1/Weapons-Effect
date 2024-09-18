@@ -20,7 +20,7 @@ public enum ModToolTiers implements Tier {
     ICE_SWORD(ModTags.Items.ICE_SWORD, 900, 1.0F, 1.0F, 13, () -> Ingredient.of(ModItems.ICE_SWORD.get())),
     LANCE(ModTags.Items.LANCE, 1000, 1.0F, 1.0F, 10, () -> Ingredient.of(ModItems.LANCE.get())),
     POISON_SWORD(ModTags.Items.POISON_SWORD, 800, 1.0F, 1.0F, 11, () -> Ingredient.of(ModItems.POISON_SWORD.get())),
-    STRENGTHS_HAMMER(ModTags.Items.STRENGTHS_HAMMER, 2000, 1.0F, 1.0F, 7, () -> Ingredient.of(ModItems.STRENGTHS_HAMMER.get())),
+    HAMMER(ModTags.Items.HAMMER, 2000, 1.0F, 1.0F, 7, () -> Ingredient.of(ModItems.HAMMER.get())),
     WINGS_OF_DOOM(ModTags.Items.WINGS_OF_DOOM, 5000, 1.0F, 1.0F, 30, () -> Ingredient.of(ModItems.WINGS_OF_DOOM.get())),
     SWIFTNESS_DAGGER(ModTags.Items.SWIFTNESS_DAGGER, 500, 1.0F, 1.0F, 8, () -> Ingredient.of(ModItems.SWIFTNESS_DAGGER.get()));
 

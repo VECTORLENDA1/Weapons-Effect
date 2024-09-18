@@ -21,7 +21,7 @@ import java.util.UUID;
 public class BlackHoleEntity extends Entity {
     public static final int DEFAULT_LIFETIME = 200;
     public static final float DEFAULT_MAX_RADIUS = 10.0F;
-    private static final float GROWTH_RATE = 0.08F;
+    private static final float GROWTH_RATE = 0.06F;
 
     private int lifetime;
     private float currentRadius;
