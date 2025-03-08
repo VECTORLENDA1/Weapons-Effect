@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:blaze_rod"
+    },
+    "B": {
+      "item": "weaponseffect:ignithra_block"
+    }
+  },
+  "pattern": [
+    "  B",
+    " B ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:fire_sword"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "weaponseffect:nexalite"
+    },
+    "B": {
+      "item": "weaponseffect:astralite"
+    }
+  },
+  "pattern": [
+    "  B",
+    " X ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:ice_sword"
+  }
+}

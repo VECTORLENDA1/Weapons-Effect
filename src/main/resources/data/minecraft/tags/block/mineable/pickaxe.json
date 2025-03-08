@@ -1,0 +1,20 @@
+{
+  "values": [
+    "weaponseffect:celestine_block",
+    "weaponseffect:astralite_block",
+    "weaponseffect:deepslate_astralite_ore",
+    "weaponseffect:deepslate_nexalite_ore",
+    "weaponseffect:deepslate_ignithra_ore",
+    "weaponseffect:end_stone_celestine_ore",
+    "weaponseffect:end_stone_zenithra_ore",
+    "weaponseffect:ignithra_block",
+    "weaponseffect:ignithra_ore",
+    "weaponseffect:nexalite_block",
+    "weaponseffect:zenithra_block",
+    "weaponseffect:raw_astralite_block",
+    "weaponseffect:raw_nexalite_block",
+    "weaponseffect:raw_ignithra_block",
+    "weaponseffect:nether_antracite_ore",
+    "weaponseffect:antracite_block"
+  ]
+}

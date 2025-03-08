@@ -1,0 +1,195 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2024-09-15 09:39:12
+Description: Rendering overlay
+
+java.lang.IllegalArgumentException: Failed to create model for weaponseffect:black_hole
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$2(EntityRenderers.java:39) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at SECURE-BOOTSTRAP/it.unimi.dsi.fastutil@8.5.12/it.unimi.dsi.fastutil.objects.Object2ObjectMap.lambda$forEach$0(Object2ObjectMap.java:209) ~[fastutil-8.5.12.jar:?] {}
+	at SECURE-BOOTSTRAP/it.unimi.dsi.fastutil@8.5.12/it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap$MapEntrySet.fastForEach(Object2ObjectOpenHashMap.java:1004) ~[fastutil-8.5.12.jar:?] {}
+	at SECURE-BOOTSTRAP/it.unimi.dsi.fastutil@8.5.12/it.unimi.dsi.fastutil.objects.Object2ObjectMap.forEach(Object2ObjectMap.java:211) ~[fastutil-8.5.12.jar:?] {}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderers.createEntityRenderers(EntityRenderers.java:35) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderDispatcher.onResourceManagerReload(EntityRenderDispatcher.java:479) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.packs.resources.ResourceManagerReloadListener.lambda$reload$0(ResourceManagerReloadListener.java:21) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:80) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:143) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:117) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:106) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.Minecraft.runTick(Minecraft.java:1140) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21-51.0.33/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:91) ~[fmlloader-1.21-51.0.33.jar!/:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21-51.0.33/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:75) ~[fmlloader-1.21-51.0.33.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.1.jar!/:?] {}
+	at net.minecraftforge.bootstrap@2.1.3/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.3.jar!/:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.3.jar:2.1.3] {}
+Caused by: java.lang.IllegalArgumentException: No model for layer weaponseffect:black_hole#main
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.model.geom.EntityModelSet.bakeLayer(EntityModelSet.java:18) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRendererProvider$Context.bakeLayer(EntityRendererProvider.java:77) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/weaponseffect@1.0.5/net.vector.weaponseffect.client.renderer.BlackHoleRenderer.<init>(BlackHoleRenderer.java:26) ~[main/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$2(EntityRenderers.java:37) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	... 31 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Suspected Mod: 
+	Weapons Effect Mod (weaponseffect), Version: 1.0.5
+		at TRANSFORMER/weaponseffect@1.0.5/net.vector.weaponseffect.client.renderer.BlackHoleRenderer.<init>(BlackHoleRenderer.java:26)
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderers.lambda$createEntityRenderers$2(EntityRenderers.java:39) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at SECURE-BOOTSTRAP/it.unimi.dsi.fastutil@8.5.12/it.unimi.dsi.fastutil.objects.Object2ObjectMap.lambda$forEach$0(Object2ObjectMap.java:209) ~[fastutil-8.5.12.jar!/:?] {}
+	at SECURE-BOOTSTRAP/it.unimi.dsi.fastutil@8.5.12/it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap$MapEntrySet.fastForEach(Object2ObjectOpenHashMap.java:1004) ~[fastutil-8.5.12.jar!/:?] {}
+	at SECURE-BOOTSTRAP/it.unimi.dsi.fastutil@8.5.12/it.unimi.dsi.fastutil.objects.Object2ObjectMap.forEach(Object2ObjectMap.java:211) ~[fastutil-8.5.12.jar!/:?] {}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderers.createEntityRenderers(EntityRenderers.java:35) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.entity.EntityRenderDispatcher.onResourceManagerReload(EntityRenderDispatcher.java:479) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.packs.resources.ResourceManagerReloadListener.lambda$reload$0(ResourceManagerReloadListener.java:21) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:80) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:143) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:117) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/:?] {re:classloading,pl:accesstransformer:B}
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraftforge.client.loading.ForgeLoadingOverlay
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:891) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.Minecraft.runTick(Minecraft.java:1180) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.Minecraft.run(Minecraft.java:795) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.main.Main.main(Main.java:228) ~[forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21-51.0.33/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:91) ~[fmlloader-1.21-51.0.33.jar!/:?] {}
+	at SECURE-BOOTSTRAP/net.minecraftforge.fmlloader@1.21-51.0.33/net.minecraftforge.fml.loading.targets.CommonLaunchHandler.lambda$makeService$0(CommonLaunchHandler.java:75) ~[fmlloader-1.21-51.0.33.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:77) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:97) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.run(Launcher.java:116) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.Launcher.main(Launcher.java:75) [modlauncher-10.2.1.jar!/:?] {}
+	at SECURE-BOOTSTRAP/cpw.mods.modlauncher@10.2.1/cpw.mods.modlauncher.BootstrapEntry.main(BootstrapEntry.java:17) [modlauncher-10.2.1.jar!/:?] {}
+	at net.minecraftforge.bootstrap@2.1.3/net.minecraftforge.bootstrap.Bootstrap.moduleMain(Bootstrap.java:188) [bootstrap-2.1.3.jar!/:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.minecraftforge.bootstrap.Bootstrap.bootstrapMain(Bootstrap.java:133) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.Bootstrap.start(Bootstrap.java:53) [bootstrap-2.1.3.jar:2.1.3] {}
+	at net.minecraftforge.bootstrap.ForgeBootstrap.main(ForgeBootstrap.java:19) [bootstrap-2.1.3.jar:2.1.3] {}
+
+
+-- Uptime --
+Details:
+	JVM uptime: 14.161s
+	Wall uptime: 4.270s
+	High-res time: 11.262s
+	Client ticks: 49 ticks / 2.450s
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: No
+	Packs: vanilla, mod_resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21
+	Minecraft Version ID: 1.21
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 21.0.4, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 571926264 bytes (545 MiB) / 1157627904 bytes (1104 MiB) up to 10687086592 bytes (10192 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: 11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
+	Identifier: Intel64 Family 6 Model 141 Stepping 1
+	Microarchitecture: Tiger Lake
+	Frequency (GHz): 2.69
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 3050 Laptop GPU
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 4096.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.6109
+	Graphics card #1 name: Intel(R) UHD Graphics
+	Graphics card #1 vendor: Intel Corporation
+	Graphics card #1 VRAM (MiB): 1024.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 27.20.100.9565
+	Memory slot #0 capacity (MiB): 32768.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 46627.30
+	Virtual memory used (MiB): 26984.75
+	Swap memory total (MiB): 5888.00
+	Swap memory used (MiB): 81.96
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 75849.67, total: 478091.88
+	Space in storage for workdir (MiB): available: 75849.67, total: 478091.88
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 561.09, NVIDIA Corporation
+	Window size: 854x480
+	GFLW Platform: win32
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Universe: 400921fb54442d18
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 20/20 chunks
+	Resource Packs: vanilla, mod_resources
+	Current Language: en_us
+	Locale: pt_PT
+	System encoding: Cp1252
+	File encoding: windows-1252
+	CPU: 12x 11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
+	ModLauncher: 10.2.1
+	ModLauncher launch target: forge_userdev_client
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/ slf4jfixer PLUGINSERVICE 
+		/ runtimedistcleaner PLUGINSERVICE 
+		/ runtime_enum_extender PLUGINSERVICE 
+		/ object_holder_definalize PLUGINSERVICE 
+		/ capability_token_subclass PLUGINSERVICE 
+		/ accesstransformer PLUGINSERVICE 
+		/ eventbus PLUGINSERVICE 
+		/ mixin PLUGINSERVICE 
+		/ fml TRANSFORMATIONSERVICE 
+		/ mixin TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@51
+		javafml@51.0.33
+	Mod List: 
+		main                                              |Weapons Effect Mod            |weaponseffect                 |1.0.5               |DONE      |Manifest: NOSIGNATURE
+		                                                  |Minecraft                     |minecraft                     |1.21                |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |51.0.33             |DONE      |Manifest: NOSIGNATURE
+		jei-1.21-forge-19.7.0.90.jar                      |Just Enough Items             |jei                           |19.7.0.90           |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 70d8d87a-53a0-43ce-a8cd-e5f53f3c8fad
+	FML: 0.0
+	Forge: net.minecraftforge:51.0.33

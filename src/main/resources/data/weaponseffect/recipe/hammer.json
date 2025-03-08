@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:end_rod"
+    },
+    "X": {
+      "item": "weaponseffect:astralite_block"
+    },
+    "B": {
+      "item": "weaponseffect:nexalite_block"
+    },
+    "A": {
+      "item": "weaponseffect:zenithra_block"
+    },
+    "C": {
+      "item": "weaponseffect:celestine_block"
+    }
+  },
+  "pattern": [
+    "XAX",
+    "BCB",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:hammer"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "weaponseffect:nexalite"
+    },
+    "B": {
+      "item": "weaponseffect:astralite"
+    }
+  },
+  "pattern": [
+    "  X",
+    " B ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:poison_sword"
+  }
+}

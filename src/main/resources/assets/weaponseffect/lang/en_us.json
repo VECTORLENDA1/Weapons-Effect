@@ -1,0 +1,181 @@
+{
+
+
+  "1":             "||ITEMS||",
+  "item.weaponseffect.celestine": "Celestine Gem",
+  "item.weaponseffect.zenithra": "Zenithra Gem",
+  "item.weaponseffect.astralite": "Astralite",
+  "item.weaponseffect.raw_astralite": "Raw Astralite",
+  "item.weaponseffect.raw_nexalite": "Raw Nexalite",
+  "item.weaponseffect.nexalite": "Nexalite",
+  "item.weaponseffect.ignithra": "Ignithra",
+  "item.weaponseffect.raw_ignithra": "Raw Ignithra",
+  "item.weaponseffect.antracite": "Antracite",
+  "item.weaponseffect.obscuridium": "Obscuridium",
+  "item.weaponseffect.obscurite": "Obscurite",
+  "item.weaponseffect.raw_obscuridium": "Raw Obscuridium",
+
+
+
+
+  "2":             "||BLOCKS||",
+  "block.weaponseffect.end_stone_celestine_ore": "End Stone Celestine Ore",
+  "block.weaponseffect.nexalite_block": "Block of Nexalite",
+  "block.weaponseffect.ignithra_block": "Block of Ignithra",
+  "block.weaponseffect.deepslate_ignithra_ore": "Deepslate Ignithra Ore",
+  "block.weaponseffect.ignithra_ore": "Ignithra Ore",
+  "block.weaponseffect.raw_ignithra_block": "Block of Raw Ignithra",
+  "block.weaponseffect.astralite_block": "Block of Astralite",
+  "block.weaponseffect.zenithra_block": "Block of Zenithra",
+  "block.weaponseffect.deepslate_astralite_ore": "Deepslate Astralite Ore",
+  "block.weaponseffect.deepslate_nexalite_ore": "Deepslate Nexalite Ore",
+  "block.weaponseffect.end_stone_zenithra_ore": "End Stone Zenithra Ore",
+  "block.weaponseffect.raw_astralite_block": "Block of Raw Astralite",
+  "block.weaponseffect.raw_nexalite_block": "Block of Raw Nexalite",
+  "block.weaponseffect.celestine_block": "Block of Celestine",
+  "block.weaponseffect.antracite_block": "Block of Antracite",
+  "block.weaponseffect.nether_antracite_ore": "Nether Antracite Ore",
+  "block.weaponseffect.bedrock_obscuridium_ore": "Bedrock Obscuridium Block",
+  "block.weaponseffect.obscuridium_block": "Obscuridium Block",
+  "block.weaponseffect.obscurite_block": "Obscurite Block",
+  "block.weaponseffect.raw_obscuridium_block": "Raw Obscuridium Block",
+
+
+
+
+  "3":             "||WEAPONS||",
+  "item.weaponseffect.fire_sword": "Fire Sword",
+  "item.weaponseffect.wither_sword": "Wither Sword",
+  "item.weaponseffect.blindness_dagger": "Blindness Dagger",
+  "item.weaponseffect.darkness_mace": "Darkness Mace",
+  "item.weaponseffect.gimlis_axe": "Gimli's Axe",
+  "item.weaponseffect.ice_sword": "Ice Sword",
+  "item.weaponseffect.lance": "Lance",
+  "item.weaponseffect.poison_sword": "Poison Sword",
+  "item.weaponseffect.hammer": "Hammer",
+  "item.weaponseffect.wings_of_doom": "Wings of Doom",
+  "item.weaponseffect.swiftness_dagger": "Swiftness Dagger",
+
+
+
+  "4":            "||TOOLTIPS||",
+
+
+  "5":        "||Blindness_Dagger||",
+  "blindness.dagger.tooltip": "Inflicts Blindness",
+  "blindness.line.2": " ",
+  "blindness.immunities": "IMMUNITIES",
+  "blindness.immunities.tooltip": "Blindness",
+
+
+
+  "6":         "||Darkness_Mace||",
+  "darkness.mace.tooltip": "Inflicts Darkness",
+  "darkness.line.2": " ",
+  "darkness.immunities": "IMMUNITIES",
+  "darkness.immunities.tooltip": "Darkness",
+
+
+
+  "7":         "||Fire_Sword||",
+  "fire.sword.tooltip": "Inflicts Fire",
+  "fire.line.2": " ",
+  "fire.immunities": "IMMUNITIES",
+  "fire.immunities.tooltip": "Fire",
+  "fire.line.3": " ",
+  "fire.ability": "ABILITY",
+  "fire.ability.name": "Blazing Gaze",
+  "fire.line.4": " ",
+  "fire.ability.description": "Create an area of flames where you look",
+
+
+
+  "8":         "||Gimli's_Axe||",
+  "gimlis.axe.tooltip": "Inflicts Slowness",
+
+
+
+  "9":         "||Ice_Sword||",
+  "ice.sword.tooltip": "Inflicts slowness that drain life",
+  "ice.line.2": " ",
+  "ice.immunities": "IMMUNITIES",
+  "ice.immunities.tooltip": "Slowness",
+
+
+
+  "10":         "||Lance||",
+  "lance.tooltip": "Make them Weak",
+  "lance.line.2": " ",
+  "lance.immunities": "IMMUNITIES",
+  "lance.immunities.tooltip": "Slowness",
+
+
+
+  "11":         "||Poison_Sword||",
+  "poison.sword.tooltip": "Inflicts Poison",
+  "poison.line.2": " ",
+  "poison.immunities": "IMMUNITIES",
+  "poison.immunities.tooltip": "Poison",
+
+
+
+  "12":         "||Hammer||",
+  "hammer.tooltip": "Inflicts Slowness",
+  "hammer.line.2": " ",
+  "hammer.ability": "ABILITY",
+  "hammer.ability.name": "Explosion",
+  "hammer.line.3": " ",
+  "hammer.ability.description": "Create an explosive area dealing massive damage",
+
+
+
+  "13":         "||Swiftness_Dagger||",
+  "swiftness.dagger.tooltip": "Inflicts Poison",
+  "swiftness.line.2": " ",
+  "swiftness.immunities": "IMMUNITIES",
+  "swiftness.immunities.tooltip": "Slowness",
+
+
+
+  "14":         "||Wings_of_Doom||",
+  "wings.of.doom.tooltip": "Inflicts them with Poison and Withering",
+  "wings.of.doom.tooltip.2": "make them slow, blind and weak",
+  "wings.of.doom.tooltip.3": "and with dark they can's see",
+  "wings.of.doom.line.2": " ",
+  "wings.of.doom.immunities": "IMMUNITIES",
+  "wings.of.doom.immunities.tooltip": "Blindness",
+  "wings.of.doom.immunities.tooltip.2": "Darkness",
+  "wings.of.doom.immunities.tooltip.3": "Poison",
+  "wings.of.doom.immunities.tooltip.4": "Slowness",
+  "wings.of.doom.immunities.tooltip.5": "Weakness",
+  "wings.of.doom.immunities.tooltip.6": "Wither",
+  "wings.of.doom.immunities.tooltip.7": "Fire",
+  "wings.of.doom.line.3": " ",
+  "wings.of.doom.abilitys": "ABILITY",
+  "wings.of.doom.abilitys.name": "Black Hole",
+  "wings.of.doom.line.4": " ",
+  "wings.of.doom.ability.description": "Create a Black Hole in the World and consume everything",
+
+
+
+  "15":         "||Wither_Sword||",
+  "wither.sword.tooltip": "Inflicts Wither",
+  "wither.line.2": " ",
+  "wither.immunities": "IMMUNITIES",
+  "wither.immunities.tooltip": "Wither",
+  "wither.line.3": " ",
+  "wither.ability": "ABILITY",
+  "wither.ability.name": "Wither Rain",
+  "wither.line.4": " ",
+  "wither.ability.description": "Launch wither skulls from your sword",
+
+
+
+  "16":         "||Abilities||",
+  "item.hammer.cooldown": "Hammer on Cooldown",
+  "item.wither_sword.cooldown": "Wither Sword on Cooldown",
+  "item.fire.sword.cooldown": "Fire Sword on Cooldown",
+
+
+  "creativetab.weapons_effect": "Weapons Effect"
+}

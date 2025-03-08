@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "weaponseffect:nexalite_block"
+    }
+  },
+  "pattern": [
+    "  B",
+    " B ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:wither_sword"
+  }
+}

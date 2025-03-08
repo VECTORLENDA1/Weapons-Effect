@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1,
+  "group": "nexalite",
+  "ingredient": {
+    "item": "weaponseffect:deepslate_nexalite_ore"
+  },
+  "result": {
+    "id": "weaponseffect:nexalite"
+  }
+}

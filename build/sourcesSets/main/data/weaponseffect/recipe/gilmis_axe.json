@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "weaponseffect:zenithra"
+    },
+    "B": {
+      "item": "weaponseffect:celestine"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "B#B",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:gimlis_axe"
+  }
+}

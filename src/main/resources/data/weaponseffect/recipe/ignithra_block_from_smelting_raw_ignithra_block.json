@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 900,
+  "experience": 6.3,
+  "group": "ignithra",
+  "ingredient": {
+    "item": "weaponseffect:raw_ignithra_block"
+  },
+  "result": {
+    "id": "weaponseffect:ignithra_block"
+  }
+}

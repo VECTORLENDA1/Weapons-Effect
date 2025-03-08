@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "weaponseffect:nexalite"
+    }
+  },
+  "pattern": [
+    "   ",
+    " B ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:blindness_dagger"
+  }
+}

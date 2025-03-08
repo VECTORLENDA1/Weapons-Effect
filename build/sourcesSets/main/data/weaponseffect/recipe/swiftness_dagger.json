@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "weaponseffect:astralite"
+    }
+  },
+  "pattern": [
+    "   ",
+    " B ",
+    "#  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:swiftness_dagger"
+  }
+}
