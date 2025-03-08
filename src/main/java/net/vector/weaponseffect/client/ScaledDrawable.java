@@ -16,6 +16,7 @@ public class ScaledDrawable implements IDrawable {
     @Override
     public int getWidth() {
         return (int) (original.getWidth() * scale);
+
     }
 
     @Override
