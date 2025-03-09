@@ -15,6 +15,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, WeaponsEffect.MODID);
 
+
+
     //Items//
     public static final RegistryObject<Item> CELESTINE = ITEMS.register("celestine",
             () -> new Item(new Item.Properties()));
