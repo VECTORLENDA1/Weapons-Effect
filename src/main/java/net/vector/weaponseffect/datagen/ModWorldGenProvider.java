@@ -22,6 +22,6 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
 
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(WeaponsEffect.MOD_ID));
+        super(output, registries, BUILDER, Set.of(WeaponsEffect.MODID));
     }
 }

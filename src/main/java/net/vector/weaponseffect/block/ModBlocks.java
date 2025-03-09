@@ -22,7 +22,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, WeaponsEffect.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, WeaponsEffect.MODID);
 
     public static final RegistryObject<Block> END_STONE_CELESTINE_ORE = registerBlockItem("end_stone_celestine_ore",
             () -> new DropExperienceBlock(UniformInt.of(5,10),BlockBehaviour.Properties.of()

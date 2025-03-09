@@ -25,14 +25,14 @@ import net.vector.weaponseffect.item.ModItems;
 import net.vector.weaponseffect.registry.ModParticles;
 import org.slf4j.Logger;
 
-@Mod(WeaponsEffect.MOD_ID)
+@Mod(WeaponsEffect.MODID)
 public class WeaponsEffect {
-    public static final String MOD_ID = "weaponseffect";
+    public static final String MODID = "weaponseffect";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public WeaponsEffect() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -59,7 +59,7 @@ public class WeaponsEffect {
     public void onServerStarting(ServerStartingEvent event) {
     }
 
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {

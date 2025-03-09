@@ -8,7 +8,7 @@ import net.vector.weaponseffect.WeaponsEffect;
 
 public class ModEffect {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS
-            = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, WeaponsEffect.MOD_ID);
+            = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, WeaponsEffect.MODID);
 
 
 

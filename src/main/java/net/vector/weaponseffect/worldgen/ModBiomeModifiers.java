@@ -74,6 +74,6 @@ public class ModBiomeModifiers {
     }
 
     public static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(WeaponsEffect.MOD_ID, name));
+        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(WeaponsEffect.MODID, name));
     }
 }

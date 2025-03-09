@@ -27,7 +27,7 @@ public class ModTags {
         public static final TagKey<Item> ICE_SWORD = tag("ice_sword");
         public static final TagKey<Item> LANCE = tag("lance");
         public static final TagKey<Item> POISON_SWORD = tag("poison_sword");
-        public static final TagKey<Item> HAMMER = tag("strengths_hammer");
+        public static final TagKey<Item> HAMMER = tag("hammer");
         public static final TagKey<Item> WINGS_OF_DOOM = tag("wings_of_doom");
         public static final TagKey<Item> SWIFTNESS_DAGGER = tag("swiftness_dagger");
 

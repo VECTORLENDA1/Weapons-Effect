@@ -13,7 +13,7 @@ import net.vector.weaponseffect.item.custom.ModToolTiers;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, WeaponsEffect.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, WeaponsEffect.MODID);
 
 
 

@@ -14,7 +14,7 @@ import net.vector.weaponseffect.block.ModBlocks;
 //Isto serve para cria um guia no modo creativo dop jogo, para os teus items
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WeaponsEffect.MOD_ID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WeaponsEffect.MODID);
 
     public static final RegistryObject<CreativeModeTab> WEAPONS_EFFECT = CREATIVE_MODE_TABS.register("weapons_effect",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CELESTINE.get()))

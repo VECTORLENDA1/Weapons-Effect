@@ -16,7 +16,7 @@ import net.vector.weaponseffect.registry.ModParticles;
 
 import java.util.Collections;
 
-@Mod.EventBusSubscriber(modid = WeaponsEffect.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = WeaponsEffect.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModEvents {
     @SubscribeEvent
     public static void onRegisterEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {

@@ -10,17 +10,18 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
 
-import static net.vector.weaponseffect.WeaponsEffect.MOD_ID;
+import static net.vector.weaponseffect.WeaponsEffect.MODID;
+import static net.vector.weaponseffect.WeaponsEffect.MODID;
 
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, MODID);
 
     public static final RegistryObject<EntityType<ThrownTrident>> THROWN_LANCE = ENTITY_TYPES.register("thrown_lance",
             () -> EntityType.Builder.<ThrownTrident>of(ThrownTrident::new, MobCategory.MISC)
                     .sized(0.5F, 0.5F)
-                    .build(MOD_ID + ":thrown_lance")
+                    .build(MODID + ":thrown_lance")
     );
 
     public static final RegistryObject<EntityType<BlackHoleEntity>> BLACK_HOLE = ENTITY_TYPES.register("black_hole",
