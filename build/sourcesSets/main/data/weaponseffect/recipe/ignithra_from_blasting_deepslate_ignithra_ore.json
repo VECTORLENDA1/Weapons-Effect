@@ -5,8 +5,7 @@
   "experience": 0.7,
   "group": "ignithra",
   "ingredient": {
-    "#": "forge:oreweapons",
-    "item": "weaponseffect:deepslate_ignithra_ore"
+    "tag": "weaponseffect:deepslate_ignithra_ore"
   },
   "result": {
     "id": "weaponseffect:ignithra"

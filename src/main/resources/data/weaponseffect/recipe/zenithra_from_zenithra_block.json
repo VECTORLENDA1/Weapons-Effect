@@ -3,8 +3,7 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "#": "forge:oreweapons",
-      "item": "weaponseffect:zenithra_block"
+      "tag": "weaponseffect:zenithra_block"
   }
   ],
   "result": {

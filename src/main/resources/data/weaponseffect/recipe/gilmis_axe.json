@@ -6,12 +6,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "#": "forge:oreweapons",
-      "item": "weaponseffect:zenithra"
+      "tag": "weaponseffect:zenithra"
     },
     "B": {
-      "#": "forge:oreweapons",
-      "item": "weaponseffect:celestine"
+      "tag": "weaponseffect:celestine"
     }
   },
   "pattern": [

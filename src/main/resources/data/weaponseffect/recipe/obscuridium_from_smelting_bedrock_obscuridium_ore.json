@@ -5,8 +5,7 @@
   "experience": 3,
   "group": "obscuridium",
   "ingredient": {
-    "#": "forge:oreweapons",
-    "item": "weaponseffect:raw_obscuridium"
+    "tag": "weaponseffect:raw_obscuridium"
   },
   "result": {
     "id": "weaponseffect:obscuridium"
