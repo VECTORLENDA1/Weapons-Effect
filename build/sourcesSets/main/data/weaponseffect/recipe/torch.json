@@ -6,8 +6,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "#": "forge:oreweapons",
-      "item": "weaponseffect:antracite"
+      "tag": "weaponseffect:antracite"
     }
   },
   "pattern": [

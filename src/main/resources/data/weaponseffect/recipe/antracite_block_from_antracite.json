@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc" ,
   "key": {
     "#": {
-      "tag": "weaponseffect:antracite"
+      "tag": "forge:antracite"
     }
   },
   "pattern": [
@@ -13,5 +14,12 @@
       "result": {
         "count": 1,
         "id": "weaponseffect:antracite_block"
-      }
+      },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "megabreakertools",
+      "inverse": true
+    }
+  ]
 }

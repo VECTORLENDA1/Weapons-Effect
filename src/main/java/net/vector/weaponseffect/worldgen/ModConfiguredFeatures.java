@@ -14,7 +14,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.minecraftforge.common.Tags;
 import net.vector.weaponseffect.WeaponsEffect;
 import net.vector.weaponseffect.block.ModBlocks;
-import net.vector.weaponseffect.util.ModTags;
 
 import java.util.List;
 

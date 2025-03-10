@@ -2,8 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
   "key": {
-    "#": "forge:oreweapons",
-      "item": "weaponseffect:ignithra"
+      "tag": "weaponseffect:ignithra"
     },
   "pattern": [
     "###",

@@ -5,8 +5,7 @@
   "experience": 6.3,
   "group": "ignithra",
   "ingredient": {
-    "#": "forge:oreweapons",
-    "item": "weaponseffect:raw_ignithra_block"
+    "tag": "weaponseffect:raw_ignithra_block"
   },
   "result": {
     "id": "weaponseffect:ignithra_block"

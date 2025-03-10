@@ -2,8 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
   "key": {
-    "#": "forge:oreweapons",
-      "item": "weaponseffect:raw_obscuridium"
+    "#": {
+      "tag": "weaponseffect:raw_obscuridium"
+    }
   },
   "pattern": [
     "###",
