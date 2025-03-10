@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: weaponseffect
+Specification-Vendor: Vector
+Specification-Version: 1
+Implementation-Title: Weapons_Effect
+Implementation-Version: 1.0.5
+Implementation-Vendor: Vector
+
