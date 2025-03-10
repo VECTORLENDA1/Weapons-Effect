@@ -3,6 +3,7 @@
   "category": "misc" ,
   "key": {
     "#": {
+      "#": "forge:oreweapons",
       "item": "weaponseffect:raw_ignithra"
     }
   },

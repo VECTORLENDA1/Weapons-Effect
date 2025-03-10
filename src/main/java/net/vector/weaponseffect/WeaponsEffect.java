@@ -43,8 +43,6 @@ public class WeaponsEffect {
         ModParticles.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
 
-        new ModAnvilRecipe();
-
         modEventBus.addListener(this::addCreative);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

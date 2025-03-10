@@ -5,7 +5,9 @@
   "experience": 1,
   "group": "astralite",
   "ingredient": {
-    "item": "weaponseffect:deepslate_astralite_ore"
+    "#": {
+      "tag": "weaponseffect:deepslate_astralite_ore"
+    }
   },
   "result": {
     "id": "weaponseffect:astralite"

@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc" ,
   "key": {
     "#": {
-      "item": "weaponseffect:antracite"
+      "tag": "weaponseffect:antracite"
     }
   },
   "pattern": [

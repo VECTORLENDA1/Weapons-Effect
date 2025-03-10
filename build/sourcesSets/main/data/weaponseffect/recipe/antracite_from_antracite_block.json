@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "ingredients": [
-    {
-      "item": "weaponseffect:antracite_block"
+  "ingredients": {
+    "#": {
+    "tag": "weaponseffect:antracite_blocks"
     }
-  ],
+  },
   "result": {
     "count": 9,
     "id": "weaponseffect:antracite"
   }
 }
+

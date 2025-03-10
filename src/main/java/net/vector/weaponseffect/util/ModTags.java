@@ -6,19 +6,18 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.vector.weaponseffect.WeaponsEffect;
 
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> BEDROCK_REPLACEABLES = tag("bedrock_replaceables");
 
-
-        private static TagKey<Block> tag(String name) {
+        public static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath("weaponseffect", name));
         }
     }
 
     public static class Items {
+        //WEAPONS//
         public static final TagKey<Item> FIRE_SWORD = tag("fire_sword");
         public static final TagKey<Item> WITHER_SWORD = tag("wither_sword");
         public static final TagKey<Item> BLINDNESS_DAGGER = tag("blindness_dagger");
@@ -31,7 +30,8 @@ public class ModTags {
         public static final TagKey<Item> WINGS_OF_DOOM = tag("wings_of_doom");
         public static final TagKey<Item> SWIFTNESS_DAGGER = tag("swiftness_dagger");
 
-        private static TagKey<Item> tag(String name) {
+        
+        public static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("weaponseffect", name));
         }
     }

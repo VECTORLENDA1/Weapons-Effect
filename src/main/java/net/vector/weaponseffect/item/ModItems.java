@@ -2,6 +2,8 @@ package net.vector.weaponseffect.item;
 
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -14,8 +16,6 @@ import net.vector.weaponseffect.item.custom.ModToolTiers;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, WeaponsEffect.MODID);
-
-
 
     //Items//
     public static final RegistryObject<Item> CELESTINE = ITEMS.register("celestine",

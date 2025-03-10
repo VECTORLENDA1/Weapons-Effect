@@ -2,10 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc" ,
   "key": {
-    "#": {
+      "#": "forge:oreweapons",
       "item": "weaponseffect:obscurite"
-    }
-  },
+    },
   "pattern": [
     "###",
     "###",

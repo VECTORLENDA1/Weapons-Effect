@@ -6,6 +6,7 @@
       "item": "minecraft:stick"
     },
     "B": {
+      "#": "forge:oreweapons",
       "item": "weaponseffect:astralite"
     }
   },

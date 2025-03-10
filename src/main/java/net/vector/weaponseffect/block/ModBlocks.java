@@ -88,13 +88,13 @@ public class ModBlocks {
 
 
 
-    private static <T extends Block> RegistryObject<T> registerBlockItem(String name, Supplier<T> block) {
+    public static <T extends Block> RegistryObject<T> registerBlockItem(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+    public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

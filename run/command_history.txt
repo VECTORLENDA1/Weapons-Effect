@@ -2,3 +2,5 @@
 /kill @e[type=minecraft:creeper]
 /kill @e[type=minecraft:block_display]
 /kill @e[type=item]
+/time set day
+/weather clear
