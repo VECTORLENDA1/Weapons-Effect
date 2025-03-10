@@ -3,7 +3,8 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "forge:raw_ignithra_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:raw_ignithra_block"
   }
   ],
   "result": {

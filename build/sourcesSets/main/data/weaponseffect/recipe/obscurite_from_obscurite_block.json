@@ -3,7 +3,8 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:obscurite_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:obscurite_block"
     }
   ],
   "result": {

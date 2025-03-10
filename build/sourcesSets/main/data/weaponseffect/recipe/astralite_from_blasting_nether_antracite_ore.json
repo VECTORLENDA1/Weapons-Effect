@@ -6,7 +6,7 @@
   "group": "antracite",
   "ingredient": {
     "#": {
-      "tag": "forge:nether_antracite_ore"
+      "tag": "weaponseffect:nether_antracite_ore"
     }
   },
   "result": {

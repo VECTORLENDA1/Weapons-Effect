@@ -6,7 +6,8 @@
       "item": "minecraft:blaze_rod"
     },
     "B": {
-      "tag": "forge:ignithra_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:ignithra_block"
     }
   },
   "pattern": [

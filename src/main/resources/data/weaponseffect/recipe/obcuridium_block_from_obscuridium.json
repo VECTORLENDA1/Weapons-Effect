@@ -3,7 +3,8 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "tag": "forge:obscuridium"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:obscuridium"
     }
   },
   "pattern": [

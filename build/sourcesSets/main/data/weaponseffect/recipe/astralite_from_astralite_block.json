@@ -1,11 +1,9 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "ingredients": [
-    {
-      "tag": "forge:astralite_block"
-    }
-  ],
+  "ingredients": {
+    "tag": "weaponseffect:astralite_block"
+  },
   "result": {
     "count": 9,
     "id": "weaponseffect:astralite"

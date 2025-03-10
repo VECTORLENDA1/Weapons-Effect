@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> BEDROCK_REPLACEABLES = tag("bedrock_replaceables");
-        public static final TagKey<Block> ANTRACITE_BLOCK = tag("antracite_block");
 
         public static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath("weaponseffect", name));
@@ -31,10 +30,7 @@ public class ModTags {
         public static final TagKey<Item> WINGS_OF_DOOM = tag("wings_of_doom");
         public static final TagKey<Item> SWIFTNESS_DAGGER = tag("swiftness_dagger");
 
-        //ORES//
-        public static final TagKey<Item> CELESTINE = tag("celestine");
-        public static final TagKey<Item> ANTRACITE = tag("antracite");
-
+        
         public static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("weaponseffect", name));
         }

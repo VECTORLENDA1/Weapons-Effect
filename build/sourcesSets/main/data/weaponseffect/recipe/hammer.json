@@ -6,16 +6,20 @@
       "item": "minecraft:end_rod"
     },
     "X": {
-      "tag": "forge:astralite_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:astralite_block"
     },
     "B": {
-      "tag": "forge:nexalite_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:nexalite_block"
     },
     "A": {
-      "tag": "forge:zenithra_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:zenithra_block"
     },
     "C": {
-      "tag": "forge:celestine_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:celestine_block"
     }
   },
   "pattern": [

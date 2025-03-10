@@ -1,19 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc" ,
   "key": {
     "#": {
-      "tag": "forge:antracite"
+      "tag": "minecraft:antracite"
     }
   },
   "pattern": [
     "###",
     "###",
     "###"
-  ],
-  "result": {
-    "count": 1,
-    "id": "weaponseffect:antracite_block"
-  }
+    ],
+      "result": {
+        "count": 1,
+        "id": "weaponseffect:antracite_block"
+      }
 }
-

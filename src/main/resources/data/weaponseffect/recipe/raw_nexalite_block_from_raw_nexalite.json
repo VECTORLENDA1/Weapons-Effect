@@ -3,7 +3,8 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "tag": "forge:raw_nexalite"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:raw_nexalite"
     }
   },
   "pattern": [

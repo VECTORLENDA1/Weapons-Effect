@@ -3,7 +3,8 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:raw_obscuridium_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:raw_obscuridium_block"
     }
   ],
   "result": {

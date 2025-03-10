@@ -1,11 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc" ,
-  "ingredients": [
-     {
-      "tag": "forge:celestine_block"
+  "ingredients": {
+    "#": {
+      "item": "weaponseffect:celestine_block"
     }
-  ],
+  },
   "result": {
     "count": 9,
     "id": "weaponseffect:celestine"

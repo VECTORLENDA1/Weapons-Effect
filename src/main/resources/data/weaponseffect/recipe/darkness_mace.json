@@ -6,10 +6,12 @@
       "item": "minecraft:end_rod"
     },
     "X": {
-      "tag": "forge:zenithra"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:zenithra"
     },
     "B": {
-      "tag": "forge:zenithra_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:zenithra_block"
     }
   },
   "pattern": [

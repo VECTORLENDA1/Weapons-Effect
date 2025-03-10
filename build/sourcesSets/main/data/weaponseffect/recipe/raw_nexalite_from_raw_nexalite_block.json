@@ -3,7 +3,8 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "weaponseffect:raw_nexalite_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:raw_nexalite_block"
   }
   ],
   "result": {

@@ -3,7 +3,8 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "forge:raw_astralite_block"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:raw_astralite_block"
   }
   ],
   "result": {

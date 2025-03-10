@@ -3,7 +3,8 @@
   "category": "misc" ,
   "key": {
     "#": {
-      "tag": "forge:raw_astralite"
+      "#": "forge:oreweapons",
+      "item": "weaponseffect:raw_astralite"
     }
   },
   "pattern": [
