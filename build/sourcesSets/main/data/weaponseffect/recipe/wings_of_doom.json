@@ -6,10 +6,10 @@
       "item": "minecraft:breeze_rod"
     },
     "X": {
-      "tag": "weaponseffect:obscurite_block"
+      "tag": "forge:obscurite_block"
     },
     "B": {
-      "tag": "weaponseffect:obscuridium_block"
+      "tag": "forge:obscuridium_block"
     }
   },
   "pattern": [

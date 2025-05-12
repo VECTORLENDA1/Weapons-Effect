@@ -4,3 +4,5 @@
 /kill @e[type=item]
 /time set day
 /weather clear
+/time set day
+/weather clear

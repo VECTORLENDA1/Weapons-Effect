@@ -3,7 +3,7 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "weaponseffect:zenithra_block"
+      "tag": "forge:zenithra_block"
   }
   ],
   "result": {

@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "weaponseffect:raw_ignithra",
-    "megabreakertools:raw_ignithra"
+    "weaponseffect:raw_ignithra"
   ]
 }

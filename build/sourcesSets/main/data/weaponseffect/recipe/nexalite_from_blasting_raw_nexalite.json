@@ -5,7 +5,7 @@
   "experience": 1,
   "group": "nexalite",
   "ingredient": {
-    "tag": "weaponseffect:raw_nexalite"
+    "tag": "forge:raw_nexalite"
   },
   "result": {
     "id": "weaponseffect:nexalite"
