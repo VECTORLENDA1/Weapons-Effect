@@ -1,9 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc" ,
-  "ingredients": {
+  "ingredients": [
+    {
       "tag": "forge:nexalite_block"
-  },
+    }
+  ],
   "result": {
     "count": 9,
     "id": "weaponseffect:nexalite"

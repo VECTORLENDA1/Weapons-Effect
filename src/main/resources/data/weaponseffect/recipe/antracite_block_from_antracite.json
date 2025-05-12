@@ -10,9 +10,10 @@
     "###",
     "###",
     "###"
-    ],
-      "result": {
-        "count": 1,
-        "id": "weaponseffect:antracite_block"
-      }
+  ],
+  "result": {
+    "count": 1,
+    "id": "weaponseffect:antracite_block"
+  }
 }
+

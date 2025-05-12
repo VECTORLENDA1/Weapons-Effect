@@ -17,7 +17,7 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, WeaponsEffect.MODID);
 
     public static final RegistryObject<CreativeModeTab> WEAPONS_EFFECT = CREATIVE_MODE_TABS.register("weapons_effect",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CELESTINE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.WINGS_OF_DOOM.get()))
                 .title(Component.translatable("creativetab.weapons_effect"))
                 .displayItems((pParameters, pOutput) -> {
 

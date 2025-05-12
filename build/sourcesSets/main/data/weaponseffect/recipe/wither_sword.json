@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "B": {
-      "tag": "weaponseffect:nexalite_block"
+      "tag": "forge:nexalite_block"
     }
   },
   "pattern": [

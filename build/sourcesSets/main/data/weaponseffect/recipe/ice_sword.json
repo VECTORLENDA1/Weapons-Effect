@@ -6,10 +6,10 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "weaponseffect:nexalite"
+      "tag": "forge:nexalite"
     },
     "B": {
-      "tag": "weaponseffect:astralite"
+      "tag": "forge:astralite"
     }
   },
   "pattern": [

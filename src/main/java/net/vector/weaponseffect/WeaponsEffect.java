@@ -17,7 +17,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.client.renderer.BlackHoleRenderer;
-import net.vector.weaponseffect.crafting.ModAnvilRecipe;
 import net.vector.weaponseffect.effect.ModEffect;
 import net.vector.weaponseffect.entity.ModEntities;
 import net.vector.weaponseffect.item.ModCreativeModTabs;
