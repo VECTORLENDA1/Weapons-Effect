@@ -5,7 +5,7 @@
   "experience": 1.5,
   "group": "antracite",
   "ingredient": {
-    "tag": "weaponseffect:nether_antracite_ore"
+    "tag": "forge:nether_antracite_ore"
   },
   "result": {
     "id": "weaponseffect:antracite"

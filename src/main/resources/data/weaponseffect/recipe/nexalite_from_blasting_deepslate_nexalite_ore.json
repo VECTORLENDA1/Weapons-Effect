@@ -5,7 +5,7 @@
   "experience": 1,
   "group": "nexalite",
   "ingredient": {
-    "tag": "weaponseffect:deepslate_nexalite_ore"
+    "tag": "forge:deepslate_nexalite_ore"
   },
   "result": {
     "id": "weaponseffect:nexalite"

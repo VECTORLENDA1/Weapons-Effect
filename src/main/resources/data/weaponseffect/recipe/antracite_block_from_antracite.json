@@ -14,12 +14,5 @@
       "result": {
         "count": 1,
         "id": "weaponseffect:antracite_block"
-      },
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "megabreakertools",
-      "inverse": true
-    }
-  ]
+      }
 }

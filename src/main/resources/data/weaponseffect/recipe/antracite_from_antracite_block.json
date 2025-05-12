@@ -1,21 +1,14 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "ingredients": {
-    "#": {
-    "tag": "forge:antracite_blocks"
+  "ingredients": [
+      {
+      "tag": "forge:antracite_block"
     }
-  },
+    ],
   "result": {
     "count": 9,
     "id": "weaponseffect:antracite"
-  },
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "megabreakertools",
-      "inverse": true
-    }
-  ]
+  }
 }
 

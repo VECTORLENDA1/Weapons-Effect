@@ -6,7 +6,7 @@
   "group": "astralite",
   "ingredient": {
     "#": {
-      "tag": "weaponseffect:raw_astralite"
+      "tag": "forge:raw_astralite"
     }
   },
   "result": {
