@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc" ,
+  "category": "misc",
   "ingredients": [
     {
       "tag": "forge:nexalite_block"

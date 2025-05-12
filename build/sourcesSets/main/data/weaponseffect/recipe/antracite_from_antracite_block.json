@@ -3,9 +3,9 @@
   "category": "misc",
   "ingredients": [
       {
-      "tag": "forge:antracite_block"
+      "tag": "forge:antracite_blocks"
     }
-    ],
+  ],
   "result": {
     "count": 9,
     "id": "weaponseffect:antracite"
