@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
+import net.vector.weaponseffect.block.custom.SimpleCraftingTable;
 import net.vector.weaponseffect.item.ModItems;
 
 import java.util.function.Supplier;
@@ -84,6 +85,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> BEDROCK_OBSCURIDIUM_ORE = registerBlockItem("bedrock_obscuridium_ore",
             () -> new BedrockObscuridiumOreBlock(BlockBehaviour.Properties.of()
                     .strength(9999f).sound(SoundType.STONE)));
+
+
+
+
+    //Entity Blocks
+    public static final RegistryObject<Block> SIMPLE_CRAFTING_TABLE = registerBlockItem("simple_crafting_table",
+            () -> new SimpleCraftingTable(BlockBehaviour.Properties.of().strength(2.5f,10)
+                    .requiresCorrectToolForDrops().noOcclusion()));
 
 
 

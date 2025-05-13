@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
+import net.vector.weaponseffect.block.entity.ModBlockEntities;
 import net.vector.weaponseffect.client.renderer.BlackHoleRenderer;
 import net.vector.weaponseffect.effect.ModEffect;
 import net.vector.weaponseffect.entity.ModEntities;
@@ -40,6 +41,7 @@ public class WeaponsEffect {
         ModEffect.register(modEventBus);
         ModEntities.register(modEventBus);
         ModParticles.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);

@@ -59,6 +59,10 @@ public class ModCreativeModTabs {
                     pOutput.accept(ModBlocks.OBSCURITE_BLOCK.get());
 
 
+                    //Entity Blocks//
+                    pOutput.accept(ModBlocks.SIMPLE_CRAFTING_TABLE.get());
+
+
                     //WEAPONS//
                     pOutput.accept(ModItems.FIRE_SWORD.get());
                     pOutput.accept(ModItems.WITHER_SWORD.get());
