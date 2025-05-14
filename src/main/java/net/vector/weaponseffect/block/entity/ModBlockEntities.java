@@ -16,8 +16,8 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, "weaponseffect");
 
-public static final RegistryObject<BlockEntityType<SimpleCraftingTableEntity>> CRAFTING_BE =
-        BLOCK_ENTITIES.register("crafting_be", () -> BlockEntityType.Builder.of(
+public static final RegistryObject<BlockEntityType<SimpleCraftingTableEntity>> SIMPLE_CRAFTING_TABLE_BE =
+        BLOCK_ENTITIES.register("simple_crafting_table_be", () -> BlockEntityType.Builder.of(
                 SimpleCraftingTableEntity::new, ModBlocks.SIMPLE_CRAFTING_TABLE.get()).build(null));
 
 

@@ -26,12 +26,12 @@ public class SimpleCraftingTableEntityRenderer implements BlockEntityRenderer<Si
     public void render(SimpleCraftingTableEntity pBlockEntity, float pPatialTick, PoseStack pPoseStack,
                        MultiBufferSource pBufferSource, int pPackedLight, int pPackedOverlay) {
         ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
-        ItemStack stack = pBlockEntity.inventory.getStackInSlot(0);
+        ItemStack stack = pBlockEntity.itemHandler.getStackInSlot(0);
 
         pPoseStack.pushPose();
         pPoseStack.translate(0.5f, 1.5f, 0.5f);
         pPoseStack.scale(0.5f, 0.5f, 0.5f);
-        pPoseStack.mulPose(Axis.YP.rotationDegrees(pBlockEntity.getRenderingRotation()));
+        pPoseStack.mulPose(Axis.YP.rotationDegrees(1.0F));
 
         itemRenderer.renderStatic(stack, ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(),
                 pBlockEntity.getBlockPos()), OverlayTexture.NO_OVERLAY, pPoseStack, pBufferSource, pBlockEntity.getLevel(), 1);

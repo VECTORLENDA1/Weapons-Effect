@@ -79,7 +79,7 @@ public class WeaponsEffect {
 
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerBlockEntityRenderer(ModBlockEntities.CRAFTING_BE.get(), SimpleCraftingTableEntityRenderer::new);
+            event.registerBlockEntityRenderer(ModBlockEntities.SIMPLE_CRAFTING_TABLE_BE.get(), SimpleCraftingTableEntityRenderer::new);
         }
 
 

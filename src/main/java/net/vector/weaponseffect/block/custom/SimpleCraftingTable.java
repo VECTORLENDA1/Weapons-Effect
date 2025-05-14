@@ -17,10 +17,13 @@ import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.vector.weaponseffect.block.entity.ModBlockEntities;
 import net.vector.weaponseffect.block.entity.custom.SimpleCraftingTableEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -50,51 +53,49 @@ public class SimpleCraftingTable extends BaseEntityBlock {
     }
 
 
-
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new SimpleCraftingTableEntity(pPos, pState);
     }
 
-    protected void onRemove(BlockState pState, Level pLevel, BlockPos pPos,
-                            BlockState pNewState, boolean pMoveByPiston) {
+    protected void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
             if (pLevel.getBlockEntity(pPos) instanceof SimpleCraftingTableEntity simpleCraftingTableEntity) {
-               simpleCraftingTableEntity.drops();
-               pLevel.updateNeighbourForOutputSignal(pPos , this);
+                simpleCraftingTableEntity.drops();
             }
-            super.onRemove(pState, pLevel, pPos, pNewState, pMoveByPiston);
         }
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
+
+    //This will open the Menu of the block (Simple Crafting Table)
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel,
-                                              BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
-        if (pLevel.getBlockEntity(pPos) instanceof SimpleCraftingTableEntity simpleCraftingTableEntity) {
-            if (pPlayer.isCrouching() && !pLevel.isClientSide()) {
+    protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel, BlockPos pPos,
+                                              Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
+        if (!pLevel.isClientSide()) {
+            BlockEntity entity = pLevel.getBlockEntity(pPos);
+            if (entity instanceof SimpleCraftingTableEntity simpleCraftingTableEntity) {
                 ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(simpleCraftingTableEntity, Component.literal("Simple Crafting Table")), pPos);
-                return ItemInteractionResult.SUCCESS;
-            }
-
-            if (pPlayer.isCrouching() && pLevel.isClientSide()) {
-                return ItemInteractionResult.SUCCESS;
+            } else {
+                throw new IllegalStateException("Our container provider is missing!");
             }
         }
 
-        if (pLevel.getBlockEntity(pPos) instanceof SimpleCraftingTableEntity simpleCraftingTableEntity) {
-            if (simpleCraftingTableEntity.inventory.getStackInSlot(0).isEmpty() && !pStack.isEmpty()) {
-                simpleCraftingTableEntity.inventory.insertItem(0,pStack.copy(), false);
-                pStack.shrink(1);
-                pLevel.playSound(pPlayer, pPos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1F, 2F);
-            } else if (pStack.isEmpty()) {
-                ItemStack stackOnTable = simpleCraftingTableEntity.inventory.extractItem(0, 1,false);
-                pPlayer.setItemInHand(InteractionHand.MAIN_HAND, stackOnTable);
-                simpleCraftingTableEntity.clearContents();
-                pLevel.playSound(pPlayer, pPos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);
-            }
-        }
-
-        return ItemInteractionResult.SUCCESS;
+        return ItemInteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
+        if (pLevel.isClientSide()) {
+            return null;
+        }
+
+
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.SIMPLE_CRAFTING_TABLE_BE.get(),
+                (level, blockPos, blockState, simpleCraftingTableEntity)
+                        -> simpleCraftingTableEntity.tick(level, blockPos, blockState));
+    }
 }
+

@@ -3,10 +3,7 @@ package net.vector.weaponseffect.screen.custom;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -21,45 +18,65 @@ import org.jetbrains.annotations.Nullable;
 public class SimpleCraftingTableMenu extends AbstractContainerMenu {
     public final SimpleCraftingTableEntity blockEntity;
     private final Level level;
+    private final ContainerData data;
 
     public SimpleCraftingTableMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()));
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(26));
     }
 
-    public SimpleCraftingTableMenu(int pContainerId, Inventory inv, BlockEntity blockEntity) {
+    public SimpleCraftingTableMenu(int pContainerId, Inventory inv, BlockEntity Entity, ContainerData data) {
         super(ModMenuTypes.SIMPLE_CRAFTING_TABLE_MENU.get(), pContainerId);
-        this.blockEntity = ((SimpleCraftingTableEntity) blockEntity);
+        this.blockEntity = ((SimpleCraftingTableEntity) Entity);
         this.level = inv.player.level();
+        this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 18, 18));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 36, 18));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 54, 18));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 72, 18));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 90, 18));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 18, 36));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 36, 36));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 54, 36));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 72, 36));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 90, 36));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 18, 54));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 36, 54));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 54, 54));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 72, 54));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 90, 54));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 18, 72));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 36, 72));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 54, 72));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 72, 72));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 90, 72));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 18, 90));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 36, 90));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 54, 90));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 72, 90));
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory, 0, 90, 90));
 
+        // INPUT_SLOTS //
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 0, 18, 18));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 1, 36, 18));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 2, 54, 18));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 3, 72, 18));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 4, 90, 18));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 5, 18, 36));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 6, 36, 36));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 7, 54, 36));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 8, 72, 36));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 9, 90, 36));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 10, 18, 54));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 11, 36, 54));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 12, 54, 54));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 13, 72, 54));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 14, 90, 54));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 15, 18, 72));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 16, 36, 72));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 17, 54, 72));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 18, 72, 72));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 19, 90, 72));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 20, 18, 90));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 21, 36, 90));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 22, 54, 90));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 23, 72, 90));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 24, 90, 90));
+
+        // OUTPUT_SLOTS //
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 25, 140, 50));
+
+        addDataSlots(data);
+    }
+
+    public boolean isCrafting() {
+        return this.data.get(0) > 0;
+    }
+
+    public int getScaledArrayIndex(int index) {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);
+        int arrowPixelSize = 24;
+
+        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -78,7 +95,7 @@ public class SimpleCraftingTableMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 25;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 26;  // must be the number of slots you have!
     @Override
     public ItemStack quickMoveStack(Player playerIn, int pIndex) {
         Slot sourceSlot = slots.get(pIndex);

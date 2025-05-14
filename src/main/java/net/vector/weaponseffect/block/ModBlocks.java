@@ -92,7 +92,7 @@ public class ModBlocks {
     //Entity Blocks
     public static final RegistryObject<Block> SIMPLE_CRAFTING_TABLE = registerBlockItem("simple_crafting_table",
             () -> new SimpleCraftingTable(BlockBehaviour.Properties.of().strength(2.5f,10)
-                    .requiresCorrectToolForDrops().noOcclusion()));
+                    .requiresCorrectToolForDrops()));
 
 
 

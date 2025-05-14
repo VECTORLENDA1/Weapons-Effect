@@ -23,6 +23,7 @@ public class SimpleCraftingTableScreen extends AbstractContainerScreen<SimpleCra
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0f,1.0f ,1.0f ,1.0f);
         RenderSystem.setShaderTexture(0, GUI_TEXTURE);
+
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
