@@ -2,10 +2,13 @@ package net.vector.weaponseffect.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -67,6 +70,17 @@ public class SimpleCraftingTable extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack pStack, BlockState pState, Level pLevel,
                                               BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHitResult) {
+        if (pLevel.getBlockEntity(pPos) instanceof SimpleCraftingTableEntity simpleCraftingTableEntity) {
+            if (pPlayer.isCrouching() && !pLevel.isClientSide()) {
+                ((ServerPlayer) pPlayer).openMenu(new SimpleMenuProvider(simpleCraftingTableEntity, Component.literal("Simple Crafting Table")), pPos);
+                return ItemInteractionResult.SUCCESS;
+            }
+
+            if (pPlayer.isCrouching() && pLevel.isClientSide()) {
+                return ItemInteractionResult.SUCCESS;
+            }
+        }
+
         if (pLevel.getBlockEntity(pPos) instanceof SimpleCraftingTableEntity simpleCraftingTableEntity) {
             if (simpleCraftingTableEntity.inventory.getStackInSlot(0).isEmpty() && !pStack.isEmpty()) {
                 simpleCraftingTableEntity.inventory.insertItem(0,pStack.copy(), false);

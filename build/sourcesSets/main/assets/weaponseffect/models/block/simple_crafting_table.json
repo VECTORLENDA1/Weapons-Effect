@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "weaponseffect:block/simple_crafting_table_bottom",
+    "east": "weaponseffect:block/simple_crafting_table_side",
+    "north": "weaponseffect:block/simple_crafting_table_front",
+    "south": "weaponseffect:block/simple_crafting_table_front",
+    "particles": "weaponseffect:block/simple_crafting_table_front",
+    "up": "weaponseffect:block/simple_crafting_table_top",
+    "west": "weaponseffect:block/simple_crafting_table_side"
+  }
+}
