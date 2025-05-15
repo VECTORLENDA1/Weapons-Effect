@@ -59,9 +59,39 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/spruce_planks": {
+  "minecraft:recipes/misc/charcoal": {
     "criteria": {
-      "has_logs": "2025-05-14 17:06:43 +0100"
+      "has_log": "2025-05-14 17:06:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2025-05-14 17:06:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2025-05-14 17:06:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/birch_planks": {
+    "criteria": {
+      "has_logs": "2025-05-14 17:06:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stripped_birch_wood": {
+    "criteria": {
+      "has_log": "2025-05-14 17:06:39 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/birch_hanging_sign": {
+    "criteria": {
+      "has_stripped_logs": "2025-05-14 17:06:39 +0100"
     },
     "done": true
   },
@@ -77,33 +107,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/birch_planks": {
+  "minecraft:recipes/decorations/jungle_hanging_sign": {
     "criteria": {
-      "has_logs": "2025-05-14 17:06:39 +0100"
+      "has_stripped_logs": "2025-05-14 17:06:41 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/misc/charcoal": {
+  "minecraft:recipes/building_blocks/stripped_jungle_wood": {
     "criteria": {
-      "has_log": "2025-05-14 17:06:16 +0100"
+      "has_log": "2025-05-14 17:06:41 +0100"
     },
     "done": true
   },
-  "minecraft:nether/obtain_blaze_rod": {
+  "minecraft:recipes/building_blocks/spruce_planks": {
     "criteria": {
-      "blaze_rod": "2025-05-14 17:08:38 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stripped_birch_wood": {
-    "criteria": {
-      "has_log": "2025-05-14 17:06:39 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/brewing/blaze_powder": {
-    "criteria": {
-      "has_blaze_rod": "2025-05-14 17:08:38 +0100"
+      "has_logs": "2025-05-14 17:06:43 +0100"
     },
     "done": true
   },
@@ -113,39 +131,21 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/oak_planks": {
+  "minecraft:nether/obtain_blaze_rod": {
     "criteria": {
-      "has_logs": "2025-05-14 17:06:16 +0100"
+      "blaze_rod": "2025-05-14 17:08:38 +0100"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/birch_hanging_sign": {
+  "minecraft:recipes/brewing/blaze_powder": {
     "criteria": {
-      "has_stripped_logs": "2025-05-14 17:06:39 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/jungle_hanging_sign": {
-    "criteria": {
-      "has_stripped_logs": "2025-05-14 17:06:41 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/oak_wood": {
-    "criteria": {
-      "has_log": "2025-05-14 17:06:16 +0100"
+      "has_blaze_rod": "2025-05-14 17:08:38 +0100"
     },
     "done": true
   },
   "minecraft:recipes/brewing/brewing_stand": {
     "criteria": {
       "has_blaze_rod": "2025-05-14 17:08:38 +0100"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stripped_jungle_wood": {
-    "criteria": {
-      "has_log": "2025-05-14 17:06:41 +0100"
     },
     "done": true
   },

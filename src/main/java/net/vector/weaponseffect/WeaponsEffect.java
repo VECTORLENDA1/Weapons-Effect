@@ -24,6 +24,7 @@ import net.vector.weaponseffect.effect.ModEffect;
 import net.vector.weaponseffect.entity.ModEntities;
 import net.vector.weaponseffect.item.ModCreativeModTabs;
 import net.vector.weaponseffect.item.ModItems;
+import net.vector.weaponseffect.recipe.ModRecipes;
 import net.vector.weaponseffect.registry.ModParticles;
 import net.vector.weaponseffect.screen.ModMenuTypes;
 import net.vector.weaponseffect.screen.custom.SimpleCraftingTableScreen;
@@ -43,6 +44,7 @@ public class WeaponsEffect {
         ModItems.Register(modEventBus);
         ModBlocks.Register(modEventBus);
         ModEffect.register(modEventBus);
+        ModRecipes.register(modEventBus);
         ModEntities.register(modEventBus);
         ModParticles.register(modEventBus);
         ModMenuTypes.register(modEventBus);

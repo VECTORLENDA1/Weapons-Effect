@@ -1,7 +1,6 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
+  "type": "weaponseffect:simple_crafting_table",
+  "ingredient": {
     "#": {
       "item": "minecraft:blaze_rod"
     },
@@ -10,9 +9,11 @@
     }
   },
   "pattern": [
-    "  B",
-    " B ",
-    "#  "
+    "    B",
+    "   B ",
+    " #B  ",
+    " ##  ",
+    "#    "
   ],
   "result": {
     "count": 1,

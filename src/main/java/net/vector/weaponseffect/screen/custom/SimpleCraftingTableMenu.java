@@ -1,6 +1,7 @@
 package net.vector.weaponseffect.screen.custom;
 
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
@@ -15,10 +16,11 @@ import net.vector.weaponseffect.block.entity.custom.SimpleCraftingTableEntity;
 import net.vector.weaponseffect.screen.ModMenuTypes;
 import org.jetbrains.annotations.Nullable;
 
+import java.awt.*;
+
 public class SimpleCraftingTableMenu extends AbstractContainerMenu {
     public final SimpleCraftingTableEntity blockEntity;
     private final Level level;
-    private final ContainerData data;
 
     public SimpleCraftingTableMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
         this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(26));
@@ -28,7 +30,6 @@ public class SimpleCraftingTableMenu extends AbstractContainerMenu {
         super(ModMenuTypes.SIMPLE_CRAFTING_TABLE_MENU.get(), pContainerId);
         this.blockEntity = ((SimpleCraftingTableEntity) Entity);
         this.level = inv.player.level();
-        this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
@@ -62,22 +63,9 @@ public class SimpleCraftingTableMenu extends AbstractContainerMenu {
         this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 24, 90, 90));
 
         // OUTPUT_SLOTS //
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 25, 140, 50));
-
-        addDataSlots(data);
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 25, 145, 55));
     }
 
-    public boolean isCrafting() {
-        return this.data.get(0) > 0;
-    }
-
-    public int getScaledArrayIndex(int index) {
-        int progress = this.data.get(0);
-        int maxProgress = this.data.get(1);
-        int arrowPixelSize = 24;
-
-        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
-    }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
     // must assign a slot number to each of the slots used by the GUI.
