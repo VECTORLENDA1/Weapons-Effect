@@ -35,6 +35,12 @@ public class SimpleCraftingTableRecipe implements Recipe<SimpleCraftingTableReci
         this.recipeItems = createRecipeItems(pattern, keys, WIDTH, HEIGHT);
     }
 
+    public int getRequiredCountForSlot(int slotIndex) {
+        Ingredient ing = recipeItems.get(slotIndex);
+        // Ingredient.EMPTY é singleton, então podemos comparar por referência
+        return ing == Ingredient.EMPTY ? 0 : 1;
+    }
+
     private static NonNullList<Ingredient> createRecipeItems(String[] pattern, Map<Character, Ingredient> keys, int width, int height) {
         NonNullList<Ingredient> items = NonNullList.withSize(width * height, Ingredient.EMPTY);
         for (int i = 0; i < pattern.length; i++) {
