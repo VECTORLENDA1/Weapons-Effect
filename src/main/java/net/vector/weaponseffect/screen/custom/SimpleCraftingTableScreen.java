@@ -15,7 +15,7 @@ public class SimpleCraftingTableScreen extends AbstractContainerScreen<SimpleCra
     public SimpleCraftingTableScreen(SimpleCraftingTableMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
         this.imageWidth = 176;
-        this.imageHeight = 205;
+        this.imageHeight = 206;
     }
 
     @Override

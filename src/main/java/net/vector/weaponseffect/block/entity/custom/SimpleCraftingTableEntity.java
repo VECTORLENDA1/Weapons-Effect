@@ -13,22 +13,15 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.block.entity.ModBlockEntities;
-import net.vector.weaponseffect.item.ModItems;
 import net.vector.weaponseffect.recipe.ModRecipes;
 import net.vector.weaponseffect.recipe.SimpleCraftingTableRecipe;
 import net.vector.weaponseffect.recipe.SimpleCraftingTableRecipeInput;
@@ -51,21 +44,53 @@ public class SimpleCraftingTableEntity extends BlockEntity implements MenuProvid
 
         @Override
         public ItemStack extractItem(int slot, int amount, boolean simulate) {
-            if (slot == OUTPUT_SLOT && !simulate) {
-                // extrai o resultado real
-                ItemStack taken = super.extractItem(slot, amount, false);
-                // calcula quantas crafts foram feitas
+            if (slot == OUTPUT_SLOT) {
                 Optional<RecipeHolder<SimpleCraftingTableRecipe>> opt = getCurrentRecipe();
-                if (opt.isPresent()) {
-                    SimpleCraftingTableRecipe recipe = opt.get().value();
-                    int perCraft = recipe.getResultItem(level.registryAccess()).getCount();
-                    int times = taken.getCount() / perCraft;
-                    consumeIngredients(times);
+                if (opt.isEmpty()) {
+                    return ItemStack.EMPTY;
                 }
-                return taken;
+
+                SimpleCraftingTableRecipe recipe = opt.get().value();
+                ItemStack currentOutput = super.getStackInSlot(slot);
+
+                if (currentOutput.isEmpty()) {
+                    return ItemStack.EMPTY;
+                }
+
+                // Calcula quantos crafts são possíveis com os ingredientes disponíveis
+                int maxPossibleCrafts = Math.min(amount, currentOutput.getCount());
+                int availableCrafts = Integer.MAX_VALUE;
+
+                for (int i = 0; i < INPUT_SLOT.length; i++) {
+                    int required = recipe.getRequiredCountForSlot(i);
+                    if (required > 0) {
+                        ItemStack ingredient = getStackInSlot(i);
+                        availableCrafts = Math.min(availableCrafts, ingredient.getCount() / required);
+                    }
+                }
+
+                int craftsToDo = Math.min(maxPossibleCrafts, availableCrafts);
+                if (craftsToDo <= 0) {
+                    return ItemStack.EMPTY;
+                }
+
+                ItemStack toExtract = currentOutput.copy();
+                toExtract.setCount(craftsToDo);
+
+                if (!simulate) {
+                    // Consome os ingredientes
+                    consumeIngredients(craftsToDo);
+                    // Remove do output
+                    super.extractItem(slot, craftsToDo, false);
+                    // Atualiza o resultado
+                    updateResult(slot);
+                }
+
+                return toExtract;
             }
             return super.extractItem(slot, amount, simulate);
         }
+
     };
 
     private static final int[] INPUT_SLOT = new int[25];
@@ -106,7 +131,7 @@ public class SimpleCraftingTableEntity extends BlockEntity implements MenuProvid
         }
     }
 
-    private void consumeIngredients(int times) {
+    public void consumeIngredients(int times) {
         Optional<RecipeHolder<SimpleCraftingTableRecipe>> opt = getCurrentRecipe();
         if (opt.isEmpty()) return;
         SimpleCraftingTableRecipe recipe = opt.get().value();
@@ -158,14 +183,6 @@ public class SimpleCraftingTableEntity extends BlockEntity implements MenuProvid
         if (isEmpty) {
             itemHandler.setStackInSlot(OUTPUT_SLOT, ItemStack.EMPTY);
         }
-    }
-
-
-    private boolean canOutput(ItemStack result) {
-        ItemStack current = itemHandler.getStackInSlot(OUTPUT_SLOT);
-        if (current.isEmpty()) return true;
-        if (!ItemStack.isSameItem(current, result)) return false;
-        return current.getCount() + result.getCount() <= current.getMaxStackSize();
     }
 
     private Optional<RecipeHolder<SimpleCraftingTableRecipe>> getCurrentRecipe() {

@@ -1,1 +1,3 @@
 /time set day
+/weather clear
+/time set day
