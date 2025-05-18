@@ -27,7 +27,7 @@ public class IceSwordItem extends SwordItem {
     @Override
     public boolean hurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
         if (!pTarget.level().isClientSide()) {
-            pTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 10), pAttacker);
+            pTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 100), pAttacker);
             applyFreezingEffect(pTarget);
         }
         return super.hurtEnemy(pStack, pTarget, pAttacker);
@@ -47,7 +47,7 @@ public class IceSwordItem extends SwordItem {
                 if (entity != null && entity.isAlive()) {
                     if (ticksLeft % 20 == 0) {
                         entity.hurt(entity.damageSources().freeze(), 1.0F);
-                        entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 10));
+                        entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 100));
                     }
                     entry.setValue(ticksLeft - 1);
                     return ticksLeft <= 0;

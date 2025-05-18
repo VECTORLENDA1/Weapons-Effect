@@ -55,7 +55,7 @@ public class CustomMobExplosion extends Explosion {
             if (entity instanceof LivingEntity livingEntity && entity != getExploder()) {
                 if (getExploder() instanceof Player player) {
                     DamageSource damageSource = player.damageSources().playerAttack(player);
-                    livingEntity.hurt(damageSource, 30.0F);
+                    livingEntity.hurt(damageSource, 50.0F);
                 }
             }
         }

@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 public class HammerItem extends SwordItem {
-    private static final int COOLDOWN_TICKS = 120;
+    private static final int COOLDOWN_TICKS = 60;
 
     public HammerItem(Tier pTier, Properties pProperties) {
         super(pTier, pProperties);

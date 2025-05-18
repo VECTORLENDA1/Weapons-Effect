@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Random;
 
 public class FireSwordItem extends SwordItem {
-    private static final int COOLDOWN_TICKS = 60;
+    private static final int COOLDOWN_TICKS = 50;
 
     public FireSwordItem(Tier pTier, Properties pProperties) {
         super(pTier, pProperties);
@@ -100,7 +100,7 @@ public class FireSwordItem extends SwordItem {
                 for (LivingEntity entity : entities) {
                     if (entity != attacker && !entity.fireImmune()) {
                         entity.setRemainingFireTicks(5 * 20);
-                        applyDamageToEntity(attacker, entity, 7.0F);
+                        applyDamageToEntity(attacker, entity, 13.0F);
                     }
                 }
             }

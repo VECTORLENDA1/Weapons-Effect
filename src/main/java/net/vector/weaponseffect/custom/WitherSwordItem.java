@@ -28,8 +28,8 @@ import java.util.Random;
 
 
 public class WitherSwordItem extends SwordItem {
-    private static final int COOLDOWN_TICKS = 80;
-    private static final int NUM_HEADS = 5;
+    private static final int COOLDOWN_TICKS = 40;
+    private static final int NUM_HEADS = 8;
 
     public WitherSwordItem(Tier pTier, Properties pProperties) {
         super(pTier, pProperties);
@@ -100,7 +100,7 @@ public class WitherSwordItem extends SwordItem {
         if (level.isClientSide) {
             Minecraft minecraft = Minecraft.getInstance();
             if (minecraft != null) {
-                SoundEvent soundEvent = SoundEvents.LAVA_EXTINGUISH; // Escolha o som apropriado
+                SoundEvent soundEvent = SoundEvents.LAVA_EXTINGUISH;
                 float volume = 0.5F;
                 float pitch = 1.0F;
 
