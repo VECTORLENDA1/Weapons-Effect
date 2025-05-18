@@ -18,7 +18,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vector.weaponseffect.block.ModBlocks;
 import net.vector.weaponseffect.block.entity.ModBlockEntities;
-import net.vector.weaponseffect.block.entity.renderer.SimpleCraftingTableEntityRenderer;
 import net.vector.weaponseffect.client.renderer.BlackHoleRenderer;
 import net.vector.weaponseffect.effect.ModEffect;
 import net.vector.weaponseffect.entity.ModEntities;
@@ -81,7 +80,6 @@ public class WeaponsEffect {
 
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-            event.registerBlockEntityRenderer(ModBlockEntities.SIMPLE_CRAFTING_TABLE_BE.get(), SimpleCraftingTableEntityRenderer::new);
         }
 
 

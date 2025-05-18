@@ -69,10 +69,10 @@ public class EventEffectItems {
 
             //Damage Boost//
             Map<Class<? extends Item>, Integer> strengthAmplifiers = new HashMap<>();
-            strengthAmplifiers.put(WingsOfDoomItem.class, 2);
+            strengthAmplifiers.put(WingsOfDoomItem.class, 4);
             strengthAmplifiers.put(GimlisAxeItem.class, 1);
             strengthAmplifiers.put(DarknessMaceItem.class, 2);
-            strengthAmplifiers.put(HammerItem.class, 5);
+            strengthAmplifiers.put(HammerItem.class, 7);
             strengthAmplifiers.put(LanceItem.class, 1);
 
             int strengthAmplifier = -1;
@@ -101,7 +101,7 @@ public class EventEffectItems {
             Map<Class<? extends Item>, Integer> speedAmplifiers = new HashMap<>();
             speedAmplifiers.put(WingsOfDoomItem.class, 2);
             speedAmplifiers.put(LanceItem.class, 1);
-            speedAmplifiers.put(SwiftnessDaggerItem.class, 3);
+            speedAmplifiers.put(SwiftnessDaggerItem.class, 5);
 
             int SpeedAmplifier = -1;
 
@@ -126,7 +126,7 @@ public class EventEffectItems {
 
             //DAMAGE_RESISTANCE//
             Map<Class<? extends Item>, Integer> resAmplifiers = new HashMap<>();
-            resAmplifiers.put(WingsOfDoomItem.class, 1);
+            resAmplifiers.put(WingsOfDoomItem.class, 3);
             resAmplifiers.put(GimlisAxeItem.class, 2);
             resAmplifiers.put(DarknessMaceItem.class, 2);
             resAmplifiers.put(WitherSwordItem.class, 0);
@@ -154,7 +154,7 @@ public class EventEffectItems {
 
             //SATURATION//
             Map<Class<? extends Item>, Integer> satAmplifiers = new HashMap<>();
-            satAmplifiers.put(WingsOfDoomItem.class, 0);
+            satAmplifiers.put(WingsOfDoomItem.class, 1);
 
             int satAmplifier = -1;
 
@@ -203,7 +203,7 @@ public class EventEffectItems {
 
             //REGENERATION//
             Map<Class<? extends Item>, Integer> regenAmplifiers = new HashMap<>();
-            regenAmplifiers.put(WingsOfDoomItem.class, 0);
+            regenAmplifiers.put(WingsOfDoomItem.class, 1);
 
             int regenAmplifier = -1;
 

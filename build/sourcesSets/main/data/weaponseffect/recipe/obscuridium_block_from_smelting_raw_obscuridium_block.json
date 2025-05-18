@@ -5,7 +5,7 @@
   "experience": 27,
   "group": "obscuridium",
   "ingredient": {
-    "tag": "forge:raw_obscuridium_block"
+    "tag": "forge:block/raw_obscuridium_block"
   },
   "result": {
     "id": "weaponseffect:obscuridium_block"

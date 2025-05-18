@@ -3,7 +3,7 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "forge:ignithra_block"
+      "tag": "forge:block/ignithra_block"
     }
   ],
   "result": {

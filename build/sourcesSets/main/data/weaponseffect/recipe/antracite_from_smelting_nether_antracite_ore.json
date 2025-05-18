@@ -1,11 +1,11 @@
 {
   "type": "minecraft:smelting",
   "category": "misc",
-  "cookingtime": 900,
+  "cookingtime": 225,
   "experience": 1.5,
   "group": "antracite",
   "ingredient": {
-    "tag": "forge:nether_antracite_ore"
+    "tag": "forge:ores/nether_antracite_ore"
   },
   "result": {
     "id": "weaponseffect:antracite"

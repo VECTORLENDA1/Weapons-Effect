@@ -1,27 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "weaponseffect:simple_crafting_table",
   "category": "equipment",
-  "key": {
-    "#": {
+  "ingredient": {
+    "E": {
       "item": "minecraft:end_rod"
     },
-    "X": {
-      "tag": "forge:astralite_block"
-    },
-    "B": {
-      "tag": "forge:nexalite_block"
-    },
-    "A": {
-      "tag": "forge:zenithra_block"
+    "Z": {
+      "tag": "forge:block/zenithra_block"
     },
     "C": {
-      "tag": "forge:celestine_block"
+      "tag": "forge:block/celestine_block"
     }
   },
   "pattern": [
-    "XAX",
-    "BCB",
-    " # "
+    "ZCECZ",
+    "ZCECZ",
+    "ZCECZ",
+    "  E  ",
+    "  E  "
   ],
   "result": {
     "count": 1,

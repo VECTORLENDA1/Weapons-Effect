@@ -3,7 +3,7 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "forge:raw_astralite_block"
+      "tag": "forge:block/raw_astralite_block"
   }
   ],
   "result": {

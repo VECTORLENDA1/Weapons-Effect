@@ -1,3 +1,12 @@
 /time set day
 /weather clear
 /time set day
+/weather clear
+/time set day
+/weather clear
+/time set day
+/weather clear
+/time set day
+/gamemode survival
+/gamemode creative
+/time set day

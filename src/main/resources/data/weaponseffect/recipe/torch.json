@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
+    "S": {
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "forge:antracite"
+      "tag": "forge:ingots/antracite"
     }
   },
   "pattern": [
-    "B",
-    "#"
+    "X",
+    "S"
   ],
   "result": {
     "count": 12,

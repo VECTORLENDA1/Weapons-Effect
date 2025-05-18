@@ -1,21 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "weaponseffect:simple_crafting_table",
   "category": "equipment",
-  "key": {
-    "#": {
+  "ingredient": {
+    "B": {
       "item": "minecraft:breeze_rod"
     },
     "X": {
-      "tag": "forge:obscurite_block"
+      "tag": "forge:block/obscurite_block"
     },
-    "B": {
-      "tag": "forge:obscuridium_block"
+    "Z": {
+      "tag": "forge:block/obscuridium_block"
     }
   },
   "pattern": [
-    " BX",
-    "B #",
-    "  #"
+    " ZZZB",
+    "XX BZ",
+    "X  B ",
+    "  B  ",
+    "  B  "
   ],
   "result": {
     "count": 1,

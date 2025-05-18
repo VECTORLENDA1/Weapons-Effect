@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:obscurite_block"
+      "tag": "forge:block/obscurite_block"
     }
   ],
   "result": {

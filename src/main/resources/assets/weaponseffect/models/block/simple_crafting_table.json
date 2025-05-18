@@ -5,7 +5,7 @@
     "east": "weaponseffect:block/simple_crafting_table_side",
     "north": "weaponseffect:block/simple_crafting_table_front",
     "south": "weaponseffect:block/simple_crafting_table_front",
-    "particles": "weaponseffect:block/simple_crafting_table_front",
+    "particle": "weaponseffect:block/simple_crafting_table_front",
     "up": "weaponseffect:block/simple_crafting_table_top",
     "west": "weaponseffect:block/simple_crafting_table_side"
   }

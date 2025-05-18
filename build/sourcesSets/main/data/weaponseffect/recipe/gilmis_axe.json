@@ -1,21 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "weaponseffect:simple_crafting_table",
   "category": "equipment",
-  "key": {
-    "#": {
+  "ingredient": {
+    "S": {
       "item": "minecraft:stick"
     },
-    "X": {
-      "tag": "forge:zenithra"
+    "Z": {
+      "tag": "forge:gems/zenithra"
     },
-    "B": {
-      "tag": "forge:celestine"
+    "C": {
+      "tag": "forge:gems/celestine"
     }
   },
   "pattern": [
-    "X#X",
-    "B#B",
-    " # "
+    "Z S Z",
+    "CZSZC",
+    "C S C",
+    "  S  ",
+    "  S  "
   ],
   "result": {
     "count": 1,

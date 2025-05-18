@@ -3,7 +3,7 @@
   "category": "misc" ,
   "ingredients": [
      {
-      "tag": "forge:celestine_block"
+      "tag": "forge:block/celestine_block"
     }
   ],
   "result": {

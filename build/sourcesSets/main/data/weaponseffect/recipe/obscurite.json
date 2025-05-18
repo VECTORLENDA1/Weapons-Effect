@@ -1,0 +1,38 @@
+{
+  "type": "weaponseffect:simple_crafting_table",
+  "category": "equipment",
+  "ingredient": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "O": {
+      "tag": "forge:ingots/obscuridium"
+    },
+    "C": {
+      "tag": "forge:gems/celestine"
+    },
+    "Z": {
+      "tag": "forge:gems/zenithra"
+    },
+    "n": {
+      "tag": "forge:ingots/nexalite"
+    },
+    "A": {
+      "tag": "forge:ingots/astralite"
+    },
+    "I": {
+      "tag": "forge:ingots/ignithra"
+    }
+  },
+  "pattern": [
+    "nnAnn",
+    "AOCOA",
+    "ZINIZ",
+    "AOCOA",
+    "nnAnn"
+  ],
+  "result": {
+    "count": 4,
+    "id": "weaponseffect:obscurite"
+  }
+}

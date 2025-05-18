@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:nexalite_block"
+      "tag": "forge:block/nexalite_block"
     }
   ],
   "result": {

@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "forge:raw_obscuridium_block"
+      "tag": "forge:block/raw_obscuridium_block"
     }
   ],
   "result": {

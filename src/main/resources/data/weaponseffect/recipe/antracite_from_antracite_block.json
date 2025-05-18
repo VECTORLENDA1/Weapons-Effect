@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
       {
-      "tag": "forge:antracite_block"
+      "tag": "forge:block/antracite_block"
     }
   ],
   "result": {

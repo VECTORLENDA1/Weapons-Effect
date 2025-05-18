@@ -1,15 +1,11 @@
 package net.vector.weaponseffect.block.entity;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.block.ModBlocks;
-import net.vector.weaponseffect.block.custom.SimpleCraftingTable;
 import net.vector.weaponseffect.block.entity.custom.SimpleCraftingTableEntity;
 
 public class ModBlockEntities {

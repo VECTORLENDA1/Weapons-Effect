@@ -1,18 +1,20 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "weaponseffect:simple_crafting_table",
   "category": "equipment",
-  "key": {
-    "#": {
+  "ingredient": {
+    "S": {
       "item": "minecraft:stick"
     },
-    "X": {
-      "tag": "forge:nexalite"
+    "N": {
+      "tag": "forge:ingots/nexalite"
     }
   },
   "pattern": [
-    " XX",
-    " #X",
-    "#  "
+    "  NNN",
+    "   SN",
+    "  S N",
+    " S   ",
+    "S    "
   ],
   "result": {
     "count": 1,

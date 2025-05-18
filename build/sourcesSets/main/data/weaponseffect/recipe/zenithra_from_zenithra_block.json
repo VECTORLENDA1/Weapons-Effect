@@ -3,7 +3,7 @@
   "category": "misc" ,
   "ingredients": [
     {
-      "tag": "forge:zenithra_block"
+      "tag": "forge:gems/zenithra_block"
   }
   ],
   "result": {

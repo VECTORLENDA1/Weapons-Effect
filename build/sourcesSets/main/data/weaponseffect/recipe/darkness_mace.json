@@ -1,21 +1,23 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "weaponseffect:simple_crafting_table",
   "category": "equipment",
-  "key": {
-    "#": {
+  "ingredient": {
+    "E": {
       "item": "minecraft:end_rod"
     },
-    "X": {
-      "tag": "forge:zenithra"
+    "z": {
+      "tag": "forge:gems/zenithra"
     },
-    "B": {
-      "tag": "forge:zenithra_block"
+    "Z": {
+      "tag": "forge:block/zenithra_block"
     }
   },
   "pattern": [
-    " XB",
-    " #X",
-    "#  "
+    "Z E Z",
+    "ZzEzZ",
+    " zEz ",
+    "  E  ",
+    "  E  "
   ],
   "result": {
     "count": 1,

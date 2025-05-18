@@ -1,19 +1,20 @@
 {
   "type": "weaponseffect:simple_crafting_table",
+  "category": "equipment",
   "ingredient": {
-    "#": {
+    "B": {
       "item": "minecraft:blaze_rod"
     },
-    "B": {
-      "tag": "forge:ignithra_block"
+    "I": {
+      "tag": "forge:block/ignithra_block"
     }
   },
   "pattern": [
-    "    B",
-    "   B ",
-    " #B  ",
-    " ##  ",
-    "#    "
+    "    I",
+    "   I ",
+    " BI  ",
+    " BB  ",
+    "B    "
   ],
   "result": {
     "count": 1,
