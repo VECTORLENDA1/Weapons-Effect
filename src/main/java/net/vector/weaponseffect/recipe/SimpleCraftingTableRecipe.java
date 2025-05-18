@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import org.lwjgl.system.windows.INPUT;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -26,18 +27,17 @@ public class SimpleCraftingTableRecipe implements Recipe<SimpleCraftingTableReci
     private final NonNullList<Ingredient> recipeItems;
     private final ItemStack result;
     private final String[] pattern;
-    private final Map<Character, Ingredient> keys;
+    private final Map<Character, Ingredient> ingredient;
 
     public SimpleCraftingTableRecipe(String[] pattern, Map<Character, Ingredient> keys, ItemStack result) {
         this.pattern = pattern;
-        this.keys = keys;
+        this.ingredient = keys;
         this.result = result;
         this.recipeItems = createRecipeItems(pattern, keys, WIDTH, HEIGHT);
     }
 
     public int getRequiredCountForSlot(int slotIndex) {
         Ingredient ing = recipeItems.get(slotIndex);
-        // Ingredient.EMPTY é singleton, então podemos comparar por referência
         return ing == Ingredient.EMPTY ? 0 : 1;
     }
 
@@ -63,6 +63,11 @@ public class SimpleCraftingTableRecipe implements Recipe<SimpleCraftingTableReci
             }
         }
         return true;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
     }
 
     @Override
@@ -94,7 +99,7 @@ public class SimpleCraftingTableRecipe implements Recipe<SimpleCraftingTableReci
         public static final MapCodec<SimpleCraftingTableRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
                 Codec.STRING.listOf().fieldOf("pattern").forGetter(recipe -> Arrays.asList(recipe.pattern)),
                 Codec.unboundedMap(Codec.STRING, Ingredient.CODEC).fieldOf("ingredient")
-                        .forGetter(recipe -> recipe.keys.entrySet().stream()
+                        .forGetter(recipe -> recipe.ingredient.entrySet().stream()
                                 .collect(Collectors.toMap(e -> String.valueOf(e.getKey()), Map.Entry::getValue))),
                 ItemStack.CODEC.fieldOf("result").forGetter(recipe -> recipe.result)
         ).apply(inst, (pattern, key, result) -> {

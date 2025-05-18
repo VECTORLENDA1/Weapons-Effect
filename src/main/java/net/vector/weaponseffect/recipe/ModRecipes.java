@@ -17,7 +17,7 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<SimpleCraftingTableRecipe>> SIMPLE_CRAFTING_TABLE_SERIALIZER =
             SERIALIZERS.register("simple_crafting_table", SimpleCraftingTableRecipe.Serializer::new);
     public static final RegistryObject<RecipeType<SimpleCraftingTableRecipe>> SIMPLE_CRAFTING_TABLE_TYPE =
-            TYPES.register("simple_crafting_table", () -> new RecipeType<SimpleCraftingTableRecipe>() {
+            TYPES.register("simple_crafting_table", () -> new RecipeType<>() {
                 @Override
                 public String toString() {
                     return "simple_crafting_table";

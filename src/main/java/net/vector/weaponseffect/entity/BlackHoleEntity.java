@@ -21,7 +21,7 @@ import java.util.UUID;
 public class BlackHoleEntity extends Entity {
     public static final int DEFAULT_LIFETIME = 200;
     public static final float DEFAULT_MAX_RADIUS = 10.0F;
-    private static final float GROWTH_RATE = 0.06F;
+    private static final float GROWTH_RATE = 0.08F;
 
     private int lifetime;
     private float currentRadius;
@@ -112,13 +112,13 @@ public class BlackHoleEntity extends Entity {
             double strength;
 
             if (distance <= this.currentRadius) {
-                strength = 3.0;//Inside Black Hole
+                strength = 10.0;//Inside Black Hole
             } else if (distance <= innerZoneRadius) {
-                strength = 1.2;// First area
+                strength = 2.0;// First area
             } else if (distance <= middleZoneRadius) {
-                strength = 0.6;// Second area
+                strength = 1.2;// Second area
             } else if (distance <= outerZoneRadius) {
-                strength = 0.3;// Third area
+                strength = 0.8;// Third area
             } else {
                 continue;//Safe to flee
             }

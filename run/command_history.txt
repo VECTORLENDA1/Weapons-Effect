@@ -10,3 +10,25 @@
 /gamemode survival
 /gamemode creative
 /time set day
+/summon minecraft:ender_dragon ~ ~ ~
+/kill @e[type=minecraft:ender_dragon]
+/locate structure minecraft:stronghold
+/tp @s 1152 ~ 1200
+/gamemode spectator
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/setblock -5 60 22 minecraft:air replace
+/fill ~-30 ~-30 ~-30 ~30 ~30 ~30 sticky_piston replace minecraft:air
+/fill -5 59 22 ~30 ~100 ~30 minecraft:end_stone replace minecraft:air
+/fill -5 59 22 ~30 ~50 ~30 minecraft:end_stone replace minecraft:air
+/fill -5 59 22 ~30 ~40 ~30 minecraft:end_stone replace minecraft:air
+/fill -5 59 22 ~30 ~30 ~30 minecraft:end_stone replace minecraft:air
+/fill -5 59 22 ~30 ~30 ~30 minecraft:air replace minecraft:end_stone
+/fill -5 59 22 ~30 ~30 ~30 minecraft:air replace
+/fill -5 59 22 ~30 ~30 ~30 minecraft:air replace minecraft:end_stone
+/fill -5 39 22 ~30 ~30 ~30 minecraft:air replace minecraft:end_stone
+/kill
+/fill -5 39 22 ~30 ~30 ~30 minecraft:air replace minecraft:deepslate
+/fill -51 -61 -15 ~30 ~30 ~30 minecraft:air replace minecraft:deepslate
+/fill -51 -61 -15 ~30 ~30 ~30 minecraft:air replace minecraft:lava
