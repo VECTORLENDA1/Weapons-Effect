@@ -20,7 +20,6 @@ import java.util.Collections;
 public class ClientModEvents {
     @SubscribeEvent
     public static void onRegisterEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ModEntities.THROWN_LANCE.get(), ThrownLanceRenderer::new);
         EntityRenderers.register(ModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
     }
 

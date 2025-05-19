@@ -1,17 +1,3 @@
-/time set day
-/weather clear
-/time set day
-/weather clear
-/time set day
-/weather clear
-/time set day
-/weather clear
-/time set day
-/gamemode survival
-/gamemode creative
-/time set day
-/summon minecraft:ender_dragon ~ ~ ~
-/kill @e[type=minecraft:ender_dragon]
 /locate structure minecraft:stronghold
 /tp @s 1152 ~ 1200
 /gamemode spectator
@@ -32,3 +18,33 @@
 /fill -5 39 22 ~30 ~30 ~30 minecraft:air replace minecraft:deepslate
 /fill -51 -61 -15 ~30 ~30 ~30 minecraft:air replace minecraft:deepslate
 /fill -51 -61 -15 ~30 ~30 ~30 minecraft:air replace minecraft:lava
+/time set day
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamerule doDaylightCycle true
+/time set day
+/gamerule doDaylightCycle false
+/gamerule randomTickSpeed -10
+/gamerule randomTickSpeed -100
+/tick rate 10
+/tick rate 1
+/tick rate 20
+/tick freeze
+/tick rate 20
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/tick freeze
+/tick unfreeze
+/gamemode survival
+/gamemode creative

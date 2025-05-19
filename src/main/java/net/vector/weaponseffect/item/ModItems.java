@@ -6,9 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vector.weaponseffect.WeaponsEffect;
-import net.vector.weaponseffect.custom.*;
-import net.vector.weaponseffect.item.custom.FuelItem;
-import net.vector.weaponseffect.item.custom.ModToolTiers;
+import net.vector.weaponseffect.item.custom.*;
 
 
 public class ModItems {

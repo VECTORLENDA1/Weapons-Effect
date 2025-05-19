@@ -21,6 +21,7 @@ import net.vector.weaponseffect.block.entity.ModBlockEntities;
 import net.vector.weaponseffect.client.renderer.BlackHoleRenderer;
 import net.vector.weaponseffect.effect.ModEffect;
 import net.vector.weaponseffect.entity.ModEntities;
+import net.vector.weaponseffect.entity.client.LanceProjectileRenderer;
 import net.vector.weaponseffect.item.ModCreativeModTabs;
 import net.vector.weaponseffect.item.ModItems;
 import net.vector.weaponseffect.recipe.ModRecipes;
@@ -69,6 +70,7 @@ public class WeaponsEffect {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
+            EntityRenderers.register(ModEntities.LANCE.get(), LanceProjectileRenderer::new);
 
             MenuScreens.register(ModMenuTypes.SIMPLE_CRAFTING_TABLE_MENU.get(), SimpleCraftingTableScreen::new);
 

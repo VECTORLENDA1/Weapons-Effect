@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.vector.weaponseffect.custom.*;
+import net.vector.weaponseffect.item.custom.*;
 
 import java.util.HashMap;
 import java.util.Map;
