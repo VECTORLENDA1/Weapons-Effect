@@ -14,8 +14,7 @@ import net.vector.weaponseffect.item.custom.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@Mod.EventBusSubscriber(modid = "weaponseffect", bus =
-        Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = "weaponseffect", bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EventEffectItems {
 
     public static final String EFFECT_TAG = "ItemEffectApplied";
